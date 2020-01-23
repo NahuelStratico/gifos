@@ -1,0 +1,185 @@
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #CCA6C9;
+}
+
+
+/* ----------------------   Cabecera inicial ----------------------*/
+
+.cabecera {
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    height: 23px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    color: #fff;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 8px;
+}
+
+
+/* ------------------------------------ Navbar ---------------------*/
+
+#main-nav {
+    width: 100%;
+    height: 4.2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 6.5rem;
+}
+
+
+/* -------------------------- logo */
+
+.main-nav-content .logo {
+    width: 102px;
+    height: 64px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+
+/* -------------------------- Menu */
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.main-menu .main-menu-item {
+    list-style: none;
+    position: relative;
+}
+
+.main-menu .main-menu-link {
+    text-decoration: none;
+    color: #110038;
+    padding: 9px 26.5px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    margin: 0 8px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.main-menu .main-menu-link:hover {
+    border: 1px dashed #110038;
+}
+
+.main-menu .main-menu-item .tema {
+    padding: 9px 11px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    margin-left: -10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.main-menu .main-menu-item .tema:hover {
+    border: 1px dashed #110038;
+}
+
+.submenu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 149px;
+    padding: 9px 10px;
+    background: #E6E6E6;
+    display: none;
+}
+
+.submenu li {
+    list-style: none;
+    margin: 8px 0;
+    padding: 7px 9px;
+    border: outset;
+}
+
+.submenu a {
+    text-decoration: none;
+}
+
+.main-menu .mis-gifos {
+    text-decoration: none;
+    color: #110038;
+    margin: 0 20px;
+    font-size: 1em;
+    margin-right: 0;
+    transition: .3s;
+}
+
+.main-menu .mis-gifos:hover {
+    border: 1px dashed #110038;
+    padding: 7px;
+}
+
+.active {
+    background: #CCA6C9;
+    color: #110038;
+}
+
+.dark {
+    background: #110038;
+    color: #ffff;
+}
+
+
+/* ------------------------------------------ Buscador ------------------------ */
+
+.buscador {
+    margin: 2rem 6.5rem 0;
+    overflow: hidden;
+}
+
+.buscador .title-buscar {
+    width: 100%;
+    height: 24px;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    color: #fff;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 8px;
+}
+
+.buscador .content-buscar {
+    background: #E6E6E6;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador input {
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    margin: 11px 8px 12px 15px;
+    padding-left: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.buscador button {
+    width: 102px;
+    height: 36px;
+    margin-right: 10px;
+}
