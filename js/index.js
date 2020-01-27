@@ -1,29 +1,44 @@
 // --------------------------------- Consumo de API (GHIPY)
-const api = "https://api.giphy.com/v1/gifs/search?";
-const apiKey = '&api_key=3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH';
-const query = "&q=ryan";
 
-document.addEventListener("DOMContentLoaded", init);
 
-function init() {
-    document.getElementById('btnsearch').addEventListener("click", ev => {
-        ev.preventDefault(); // stop the page reload
 
-        let url = api + apiKey + query;
-        let str = document.getElementById('search').value.trim();
-        url = url.concat(str);
-        console.log(url);
-        var contenido = document.querySelector('#contenido');
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                contenido.innerHTML = `
-                    <img src="${data.data[0].images.url}" width="300px" height="300px">
-                `
+let searchForm = document.getElementById('search_form');
+let searchInput = document.getElementById('search');
+
+searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const query = searchInput.value;
+    search(query);
+});
+
+
+function search(query) {
+    const apiKey = '3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&=';
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}`;
+    const contenido = document.getElementById('contenido');
+    fetch(path)
+        .then(res => res.json())
+        .then(json => {
+            console.log(json.data[0].images.fixed_width.url);
+
+            let resultadoHTML = '';
+            json.data.forEach(function(obj) {
+                console.log(obj);
+                const url = obj.images.fixed_width.url;
+                let width = obj.images.fixed_width.width;
+                let height = obj.images.fixed_width.height;
+                // let title = obj.title;
+                resultadoHTML += `<img class="item" src="${url}" width="${width}" height="${height}">`;
             });
-    });
+
+            contenido.innerHTML = resultadoHTML;
+        }).catch(function(error) {
+            console.log(error.message);
+        });
 }
+
+
+
 
 
 

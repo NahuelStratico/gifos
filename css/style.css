@@ -24,6 +24,14 @@ html {
 }
 
 
+/* ------------------------------------Container principal----------- */
+
+.container {
+    width: calc(200px * 4 + 3em);
+    margin: auto;
+}
+
+
 /* ------------------------------------ Navbar ---------------------*/
 
 #main-nav {
@@ -40,7 +48,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 6.5rem;
+    padding: 0;
 }
 
 
@@ -158,7 +166,7 @@ html {
 /* ------------------------------------------ Buscador ------------------------ */
 
 .buscador {
-    margin: 2rem 6.5rem 0;
+    margin: 2rem 0;
     overflow: hidden;
 }
 
@@ -199,6 +207,18 @@ html {
 }
 
 
+/* ------------------------------------------- Contenido Buscado por el usuario -------------------- */
+
+.contenido {
+    columns: 4;
+    column-gap: 1em;
+}
+
+.item {
+    margin-bottom: 1em;
+}
+
+
 /* ------------------------------------------- Hoy te sugerimos -----------------------  */
 
 .title_sugerido {
@@ -206,7 +226,7 @@ html {
     margin-bottom: 0;
     overflow: hidden;
     background: #E6E6E6;
-    width: 82%;
+    width: 100%;
     height: 32px;
     display: flex;
     align-items: center;
@@ -254,10 +274,6 @@ html {
     color: #fff;
 }
 
-.img {
-    /* position: absolute; */
-}
-
 .btnjonathan {
     cursor: pointer;
     width: 80px;
@@ -266,6 +282,7 @@ html {
     color: #fff;
     padding: 5px;
     margin-top: -36px;
+    margin-left: 5px;
 }
 
 
