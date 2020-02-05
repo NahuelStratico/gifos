@@ -1,6 +1,7 @@
 // --------------------------------- Consumo de API (GHIPY)
 
 
+// ----------- Buscador de GIF ---------------- ////////////
 
 let searchForm = document.getElementById('search_form');
 let searchInput = document.getElementById('search');
@@ -37,6 +38,33 @@ function search(query) {
         });
 }
 
+
+
+// ------------- Tendencias ---------------- ////////////
+
+
+const trendingApi = 'https://api.giphy.com/v1/gifs/trending?api_key=3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&limit=21&rating=G';
+const trending = document.getElementById('trending');
+
+fetch(trendingApi)
+    .then(res => res.json())
+    .then(json => {
+        // console.log(json.data[0].images.fixed_width.url);
+
+        let resultadoHTML = '';
+        json.data.forEach(function(object) {
+            console.log(object);
+            const url = object.images.fixed_width.url;
+            let width = object.images.fixed_width.width;
+            let height = object.images.fixed_width.height;
+            // let title = obj.title;
+            resultadoHTML += `<img class="item" src="${url}" width="${width}" height="${height}">`;
+        });
+        trending.innerHTML = resultadoHTML;
+
+    }).catch(function(error) {
+        console.log(error.message);
+    });
 
 
 
@@ -84,12 +112,12 @@ function search(query) {
 
 $(document).on('ready', function() {
 
-    var submenu = $('#submenu')
+    var submenu = $('#submenu');
 
     $('#btn-sub').click(function() {
         // Mostrar submenu
         submenu.slideToggle();
-    })
+    });
 });
 
 
@@ -104,18 +132,18 @@ const btnNight = document.querySelector('#night');
 
 
 // cuando hago click en modo dia pasa lo siguiente:
-// btnDay.addEventListener('click', () => {
-//     // document.body.classList.add('active');
-//     // document.body.classList.remove('dark');
-//     btnDay.classList.add('active');
-//     btnNight.classList.remove('dark');
-// });
+btnDay.addEventListener('click', () => {
+    // document.body.classList.add('active');
+    // document.body.classList.remove('dark');
+    btnDay.classList.add('active');
+    btnNight.classList.remove('dark');
+});
 
 // // cuando hago click en modo noche pasa lo siguiente:
-// btnNight.addEventListener('click', () => {
-//     // document.body.classList.add('dark');
-//     // document.body.classList.remove('active');
-//     btnNight.classList.add('dark');
-//     btnDay.classList.remove('active');
+btnNight.addEventListener('click', () => {
+    // document.body.classList.add('dark');
+    // document.body.classList.remove('active');
+    btnNight.classList.add('dark');
+    btnDay.classList.remove('active');
 
-// });
+});
