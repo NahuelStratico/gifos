@@ -167,6 +167,7 @@ html {
 
 .buscador {
     margin: 2rem 0;
+    margin-bottom: 0;
     overflow: hidden;
 }
 
@@ -204,6 +205,26 @@ html {
     width: 102px;
     height: 36px;
     margin-right: 10px;
+}
+
+
+/* ------------------------------------------ Keyword ----------------------------------- */
+
+.keyword {
+    width: 100%;
+    height: 150px;
+    background: #E6E6E6;
+    border-top: inset;
+}
+
+.keysugerida {
+    width: 85%;
+    height: 34px;
+    background-color: #F0F0F0;
+    border-color: #808080;
+    border: outset;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
 }
 
 
