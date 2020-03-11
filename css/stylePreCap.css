@@ -1,0 +1,155 @@
+* {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF4FD;
+}
+
+
+/* ----------------------   Cabecera inicial ----------------------*/
+
+.cabecera {
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    height: 23px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    color: #fff;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 8px;
+}
+
+
+/* ---------------- Arrow */
+
+.arrow {
+    position: absolute;
+    top: 79px;
+    left: 60px;
+    max-width: 24px;
+    max-height: 24px;
+}
+
+
+/* ---------------- Logo */
+
+.logo {
+    position: absolute;
+    top: 66px;
+    left: 91px;
+    width: 102.6px;
+    height: 64px;
+}
+
+
+/* --------------------------------   BOX ----------------------*/
+
+.box {
+    width: 684px;
+    min-height: 386px;
+    margin: 153px auto;
+    background-color: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -moz-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-bottom: 153px;
+}
+
+
+/* ---------------- Encabezado */
+
+.encabezado {
+    max-height: 24px;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    margin: 2px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding-left: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2px;
+}
+
+.encabezado p {
+    margin: 0;
+    line-height: 18px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.encabezado img {
+    margin: auto 0;
+    margin-right: 10px;
+}
+
+
+/* ---------------- Contenido */
+
+.content_box {
+    max-width: 832px;
+    max-height: 434px;
+    border: 1px inset #000;
+    background-color: gray;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+#video {
+    max-width: 832px;
+    max-height: 434px;
+}
+
+
+/* ---------------- Bottons */
+
+.camera {
+    display: inline-block;
+    padding: 9px 15.5px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-right: -5px;
+    border-right: none;
+}
+
+.camera img {
+    width: 13.5px;
+    height: 10.5px;
+}
+
+.buttons {
+    display: block;
+    text-align: right;
+    padding: 0 2rem 1rem 0;
+}
+
+.buttons .capturar {
+    display: inline-block;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.buttons .capturar a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
