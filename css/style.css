@@ -63,6 +63,116 @@ html {
 }
 
 
+/* ========================================= DARK MODE  =============================================*/
+
+.active {
+    background: #FFF4FD;
+    border: 1px solid #CCA6C9;
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+
+/* Body */
+
+.dark {
+    background: #110038;
+}
+
+
+/* cabecera */
+
+body.dark .cabecera {
+    background: linear-gradient(90deg, #2E32FB, #EE3EFE);
+}
+
+
+/* oculto el logo dark */
+
+#logo_dark {
+    display: none;
+}
+
+
+/* Activo el Dark logo */
+
+body.dark #logo_dark {
+    display: block;
+}
+
+body.dark #logo_white {
+    display: none;
+}
+
+
+/* Dark buttons */
+
+.night {
+    background: #2E32FB;
+    border: 1px solid rgba(51, 53, 143, 0.20);
+    box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+body.dark .submenu {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+body.dark .day {
+    background: #CCCCCC;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+body.dark .day a {
+    color: #110038;
+}
+
+body.dark .noche a {
+    color: #fff;
+}
+
+body.dark .main-menu-link {
+    background: #CE36DB;
+    color: #fff;
+}
+
+body.dark .mis-gifos {
+    color: #ffffff;
+}
+
+body.dark .mis-gifos:hover {
+    border: 1px dashed #fff;
+}
+
+body.dark .main-menu-item .tema {
+    background: #CE36DB;
+    color: #fff;
+}
+
+
+/* --------------- Buscador */
+
+
+/* Title_bar_dark */
+
+body.dark .title-buscar {
+    background: linear-gradient(90deg, #2E32FB, #EE3EFE);
+}
+
+body.dark .content-buscar {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+body.dark .keyword {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+}
+
+
+/* ========================================= # DARK MODE  =============================================*/
+
+
 /* -------------------------- Menu */
 
 .main-menu {
@@ -123,7 +233,7 @@ html {
 }
 
 .submenu li:hover {
-    background: #CCA6C9;
+    border: 1p dashed #000;
 }
 
 .submenu a {
@@ -132,10 +242,6 @@ html {
     height: 100%;
     display: inline-block;
     line-height: 32px;
-}
-
-.submenu a:hover {
-    color: #fff;
 }
 
 .main-menu .mis-gifos {
@@ -150,16 +256,6 @@ html {
 .main-menu .mis-gifos:hover {
     border: 1px dashed #110038;
     padding: 7px;
-}
-
-.active {
-    background: #CCA6C9;
-    color: #110038;
-}
-
-.dark {
-    background: #110038;
-    color: #ffff;
 }
 
 

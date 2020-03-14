@@ -121,10 +121,32 @@ $(document).on('ready', function() {
 });
 
 
+const btnDark = document.getElementById('night');
+const btnDay = document.getElementById('day');
+
+btnDark.addEventListener('click', () => {
+    document.body.classList.add('dark');
+    btnDark.classList.add('night');
+    btnDay.classList.remove('active');
+});
+
+btnDay.addEventListener('click', () => {
+    document.body.classList.remove('dark');
+    btnDark.classList.remove('night');
+    btnDay.classList.add('active');
+});
+
+
+
+
+
+
+
+
 //  Dark Mode
 
-const btnDay = document.querySelector('#day');
-const btnNight = document.querySelector('#night');
+// const btnDay = document.querySelector('#day');
+// const btnNight = document.querySelector('#night');
 
 // inicializo la clase active
 // btnDay.classList.add('active');
@@ -132,18 +154,18 @@ const btnNight = document.querySelector('#night');
 
 
 // cuando hago click en modo dia pasa lo siguiente:
-btnDay.addEventListener('click', () => {
-    // document.body.classList.add('active');
-    // document.body.classList.remove('dark');
-    btnDay.classList.add('active');
-    btnNight.classList.remove('dark');
-});
+// btnDay.addEventListener('click', () => {
+// document.body.classList.add('active');
+// document.body.classList.remove('dark');
+//     btnDay.classList.add('active');
+//     btnNight.classList.remove('dark');
+// });
 
 // // cuando hago click en modo noche pasa lo siguiente:
-btnNight.addEventListener('click', () => {
-    // document.body.classList.add('dark');
-    // document.body.classList.remove('active');
-    btnNight.classList.add('dark');
-    btnDay.classList.remove('active');
+// btnNight.addEventListener('click', () => {
+// document.body.classList.add('dark');
+// document.body.classList.remove('active');
+//     btnNight.classList.add('dark');
+//     btnDay.classList.remove('active');
 
-});
+// });
