@@ -12,8 +12,10 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/afecc65938.js"></script>
 
-    <!-- CSS -->
+    <!-- CSS CREAR GIFOS -->
     <link rel="stylesheet" href="css/styleCrear.css">
+
+
 </head>
 
 <body>
@@ -32,8 +34,8 @@
         <img src="assets/gifOF_logo.png" alt="Logo">
     </a>
 
-    <!-- Contenido -->
-    <div class="box">
+    <!-- Contenido Crear Gifos -->
+    <div class="box" id="crearGifos">
 
         <div class="encabezado">
             <p>Crear Gifos</p>
@@ -69,8 +71,8 @@
                 <div class="cancelar">
                     <a href="index.html">Cancelar</a>
                 </div>
-                <div class="comenzar">
-                    <a href="precaptura.html">Comenzar</a>
+                <div id="comenzar" class="comenzar">
+                    <a href="#">Comenzar</a>
                 </div>
             </div>
         </div>
@@ -78,6 +80,50 @@
     </div>
 
 
+    <!-- Contenido Precaptura -->
+    <div class="box_precaptura" id="precaptura">
+        <div class="encabezado_precaptura">
+            <p>Un Chequeo Antes de Empezar</p>
+            <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
+        </div>
+
+        <!-- Captura video -->
+        <div class="content_box_precaptura" id="content_video">
+            <video id="recording" autoplay></video>
+        </div>
+
+
+        <!-- Button captura -->
+        <div id="buttons_precaptura" class="buttons_precaptura">
+            <div id="camera" class="camera">
+                <img src="assets/camera.svg" alt="camera">
+            </div>
+            <div id="recordButton" class="capturar" onclick="capturaGIF()">
+                <a href="#">Capturar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mis Gifos Guardados -->
+
+    <div class="contenedor_mis_gifos">
+        <div class="mis_gifos">
+            <h4>Mis Gifos</h4>
+        </div>
+
+        <div id="my_gifos" class="my_gifos">
+            <img id="uploadedGIF" />
+        </div>
+    </div>
+
+
+
+    <!-- Captura JS -->
+    <script src="js/captura.js"></script>
+
+    <!-- Libreria Record RTC -->
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 </body>
 
 </html>

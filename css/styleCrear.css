@@ -168,3 +168,196 @@ ol {
     text-align: center;
     line-height: 18px;
 }
+
+
+/* ============================================ ESTILOS PRECAPTURA =============================*/
+
+
+/* OCULTANDO PRECAPTURA */
+
+#precaptura {
+    display: none;
+}
+
+
+/* --------------------------------   BOX ----------------------*/
+
+.box_precaptura {
+    width: 684px;
+    min-height: 386px;
+    margin: 153px auto;
+    background-color: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -moz-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-bottom: 153px;
+}
+
+
+/* ---------------- Encabezado */
+
+.encabezado_precaptura {
+    max-height: 24px;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    margin: 2px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding-left: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2px;
+}
+
+.encabezado_precaptura p {
+    margin: 0;
+    line-height: 18px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.encabezado_precaptura img {
+    margin: auto 0;
+    margin-right: 10px;
+}
+
+
+/* ---------------- Contenido */
+
+.content_box_precaptura {
+    max-width: 832px;
+    max-height: 434px;
+    border: 1px inset #000;
+    background-color: gray;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+
+/* ---------------- Bottons */
+
+.camera {
+    display: inline-block;
+    padding: 9px 15.5px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-right: -5px;
+    border-right: none;
+}
+
+.camera img {
+    width: 13.5px;
+    height: 10.5px;
+}
+
+.buttons_precaptura {
+    display: block;
+    text-align: right;
+    padding: 0 2rem 1rem 0;
+}
+
+.buttons_precaptura .capturar {
+    display: inline-block;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.buttons_precaptura .capturar a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+
+/* ============================================ FIN ESTILOS PRECAPTURA =============================*/
+
+
+/* ============================================ MIS GIFOS =============================*/
+
+.contenedor_mis_gifos {
+    margin: 3rem 4rem;
+}
+
+.mis_gifos {
+    margin: 4rem 0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: #E6E6E6;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border: inset;
+    padding: 5px;
+}
+
+.mis_gifos h4 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #110038;
+}
+
+
+/* ============================================  FIN MIS GIFOS =============================*/
+
+
+/* ===========================  Boton Listo =========================== */
+
+
+/* .button_listo {
+    display: none;
+} */
+
+.icon {
+    display: inline-block;
+    padding: 9px 15.5px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-right: -5px;
+    border-right: none;
+}
+
+.icon img {
+    width: 13.5px;
+    height: 10.5px;
+}
+
+.button_listo {
+    /* display: block; */
+    text-align: right;
+    padding: 0 2rem 1rem 0;
+}
+
+.button_listo .btn_listo {
+    display: inline-block;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.button_listo .btn_listo a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}

@@ -107,8 +107,9 @@ fetch(trendingApi)
 
 // 
 
+// =============================== DARK MODE =========================================
 
-// --------------------------------------  dropdown tema
+// ------  dropdown tema
 
 $(document).on('ready', function() {
 
@@ -120,6 +121,7 @@ $(document).on('ready', function() {
     });
 });
 
+// --------- Opciones Dark / Day
 
 const btnDark = document.getElementById('night');
 const btnDay = document.getElementById('day');
@@ -137,7 +139,7 @@ btnDay.addEventListener('click', () => {
 });
 
 
-
+// =============================== FIN #DARK MODE =========================================
 
 
 
