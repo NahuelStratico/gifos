@@ -1,8 +1,33 @@
-const comenzar = document.getElementById('comenzar');
+// ============== Tomo los ID
 
-comenzar.addEventListener('click', () => {
-    document.getElementById('crearGifos').style.display = 'none';
-    document.getElementById('precaptura').style.display = 'block';
+// Id Pantalla 1
+const pantallaCrearG = document.getElementById('crearGifos');
+const btnComenzar = document.getElementById('comenzar');
+
+// Id Pantalla 2
+const pantallaPrecaptura = document.getElementById('pantallaPrecaptura');
+const btnCapturar = document.getElementById('recordButton');
+
+// Id Pantalla 3
+const pantallaListo = document.getElementById('pantallaCaptura');
+const btnCaptura = document.getElementById('btnCaptura');
+
+// Id Pantalla 4
+const pantallaPrevia = document.getElementById('vistaPrevia');
+const btnRepetir = document.getElementById('btnRepCap');
+const btnSubir = document.getElementById('btnSubir');
+
+// Id Pantalla 5 / Subida con Exito
+const pantallaExito = document.getElementById('exito');
+const btnListoExito = document.getElementById('btn_listoExito');
+
+
+
+// ===================== Pantalla 1  / Inicio
+
+btnComenzar.addEventListener('click', () => {
+    pantallaCrearG.style.display = 'none';
+    pantallaPrecaptura.style.display = 'block';
 
     navigator.mediaDevices.getUserMedia({
             video: true,
@@ -10,6 +35,46 @@ comenzar.addEventListener('click', () => {
         })
         .then(stream => video.srcObject = stream)
         .catch(console.error);
+});
+
+// ====================== Pantalla 2  / Capturar
+
+btnCapturar.addEventListener('click', () => {
+    pantallaPrecaptura.style.display = 'none';
+    pantallaListo.style.display = 'block';
+
+
+});
+
+
+// ======================  Pantalla 3 /   -- Subir || Repetir
+btnCaptura.addEventListener('click', () => {
+    pantallaListo.style.display = 'none';
+    pantallaPrevia.style.display = 'block';
+
+});
+
+
+// ===================== Repetir Guifo
+
+btnRepetir.addEventListener('click', () => {
+    pantallaPrevia.style.display = 'none';
+    pantallaPrecaptura.style.display = 'block';
+});
+
+// ====================== Pantalla 4 /
+
+// ===================== Pantalla Cargado con Exito
+btnSubir.addEventListener('click', () => {
+    pantallaPrevia.style.display = 'none';
+    pantallaExito.style.display = 'block';
+});
+
+
+// ==================== Boton que te lleva a Pantalla de inicio
+btnListoExito.addEventListener('click', () => {
+    pantallaExito.style.display = 'none';
+    pantallaCrearG.style.display = 'block';
 });
 
 
@@ -51,9 +116,12 @@ async function startRecord() {
     console.log(recording);
     recorder.startRecording();
     recording = true; //el FLAG cambia a true para indicar que se esta grabando.  
-    document.getElementById("recordButton").innerHTML = 'Listo';
-    document.getElementById("recordButton").style.background = '#FF6161';
-    document.getElementById("camera").style.background = '#FF6161';
+
+    // Reemplazo boton Capturar por LISTO.
+    // let p = document.getElementById('parrafo').innerHTML = 'Capturando Tu Gifo';
+    // document.getElementById("recordButton").innerHTML = 'Listo';
+    // document.getElementById("recordButton").style.background = '#FF6161';
+    // document.getElementById("camera").style.background = '#FF6161';
 
     video.srcObject = stream;
     video.play();
@@ -94,9 +162,10 @@ async function uploadGIF(recordedGIF) { //PASO 4----------------
 async function showUploadedGIF(gifId) { //PASO 5---------------------------
 
     var uploadedGIF = await fetch('https://api.giphy.com/v1/gifs/' + gifId + '?api_key=' + apiKey);
+
     if (uploadedGIF.status == 200) {
         let uploadedGIFData = await uploadedGIF.json();
-        let gifs = localStorage.setItem('gif ' + gifId, JSON.stringify(uploadedGIFData));
+        localStorage.setItem('gif ' + gifId, JSON.stringify(uploadedGIFData));
 
         // A PARTIR DE ACA ES OPCIONAL
 
@@ -106,5 +175,26 @@ async function showUploadedGIF(gifId) { //PASO 5---------------------------
 
         document.getElementById("recordButton").innerHTML = 'Repetir Captura';
 
+
+
     }
 }
+
+
+// Ocultando btn Captura y reemplazarlo por LISTO
+
+// let btnCaptura = document.getElementById('recordButton');
+// let precap = document.getElementById('precaptura');
+// let btnListo = document.getElementById('captura');
+
+// btnCaptura.addEventListener('click', () => {
+//     precap.style.display = 'none';
+//     btnListo.style.display = 'block';
+
+//     navigator.mediaDevices.getUserMedia({
+//             video: true,
+//             audio: false
+//         })
+//         .then(stream => video.srcObject = stream)
+//         .catch(console.error);
+// });

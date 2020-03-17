@@ -48,6 +48,12 @@ body {
 }
 
 
+/*  Pantalla 1 */
+
+
+/* ============================================ Inicio Crear Gifos =============================*/
+
+
 /* --------------------------------   BOX ----------------------*/
 
 .box {
@@ -170,12 +176,18 @@ ol {
 }
 
 
+/* ============================================ Fin Crear Gifos =============================*/
+
+
+/*  Pantalla 2 */
+
+
 /* ============================================ ESTILOS PRECAPTURA =============================*/
 
 
 /* OCULTANDO PRECAPTURA */
 
-#precaptura {
+#pantallaPrecaptura {
     display: none;
 }
 
@@ -283,6 +295,410 @@ ol {
 
 
 /* ============================================ FIN ESTILOS PRECAPTURA =============================*/
+
+
+/*  Pantalla 3 */
+
+
+/* ============================================ ESTILOS CAPTURA ==================================*/
+
+
+/* OCULTANDO PRECAPTURA */
+
+#pantallaCaptura {
+    display: none;
+}
+
+
+/* --------------------------------   BOX ----------------------*/
+
+.box_captura {
+    width: 684px;
+    min-height: 386px;
+    margin: 153px auto;
+    background-color: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -moz-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-bottom: 153px;
+}
+
+
+/* ---------------- Encabezado */
+
+.encabezado_captura {
+    max-height: 24px;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    margin: 2px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding-left: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2px;
+}
+
+.encabezado_captura p {
+    margin: 0;
+    line-height: 18px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.encabezado_captura img {
+    margin: auto 0;
+    margin-right: 10px;
+}
+
+
+/* ---------------- Contenido */
+
+.content_box_captura {
+    max-width: 832px;
+    max-height: 434px;
+    border: 1px inset #000;
+    background-color: gray;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+
+/* ---------------- Bottons */
+
+.camera_cap {
+    display: inline-block;
+    padding: 9px 15.5px;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-right: -5px;
+    border-right: none;
+}
+
+.camera_cap img {
+    width: 13.5px;
+    height: 10.5px;
+}
+
+.buttons_captura {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+    padding: 0 2rem 1rem 0;
+}
+
+.buttons_captura .cap {
+    display: inline-block;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.buttons_captura .capturar a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+#cronometro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 27px;
+    width: 124px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+
+
+/* ============================================ FIN CAPTURA =============================*/
+
+
+/* Pantalla 4 */
+
+
+/* ============================================ Pantalla VISTA PREVIA ==================================*/
+
+
+/* OCULTANDO PRECAPTURA */
+
+#vistaPrevia {
+    display: none;
+}
+
+
+/* --------------------------------   BOX ----------------------*/
+
+.box_vista_previa {
+    width: 684px;
+    min-height: 386px;
+    margin: 153px auto;
+    background-color: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -moz-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-bottom: 153px;
+}
+
+
+/* ---------------- Encabezado */
+
+.encabezado_previa {
+    max-height: 24px;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    margin: 2px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding-left: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2px;
+}
+
+.encabezado_previa p {
+    margin: 0;
+    line-height: 18px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.encabezado_previa img {
+    margin: auto 0;
+    margin-right: 10px;
+}
+
+
+/* ---------------- Contenido */
+
+.content_box_previa {
+    max-width: 832px;
+    max-height: 434px;
+    border: 1px inset #000;
+    background-color: gray;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+
+/* ---------------- Buttons */
+
+.buttons_previa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+    padding: 0 2rem 1rem 0;
+}
+
+.buttons_preview {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* --------------- Button Repetir Captura*/
+
+.btnRepCap {
+    width: 144px;
+    height: 36px;
+    margin-right: 15px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+/* ---------------- Button Subir Guifo */
+
+.buttons_previa .btnPrevia {
+    width: 144px;
+    height: 36px;
+    display: inline-block;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin: auto 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+}
+
+.buttons_previa .btnRepCap a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.buttons_previa .btnPrevia a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+
+/* ============================================ FIN #VISTA PREVIA ==================================*/
+
+
+/* Pantalla 5 - Exito */
+
+
+/* ============================================ Guifo Cargado con Exito ==================================*/
+
+
+/* OCULTANDO PRECAPTURA */
+
+#exito {
+    display: none;
+}
+
+
+/* --------------------------------   BOX ----------------------*/
+
+.box_exito {
+    position: relative;
+    width: 684px;
+    min-height: 386px;
+    margin: 153px auto;
+    background-color: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -moz-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-bottom: 153px;
+}
+
+
+/* ---------------- Encabezado */
+
+.encabezado_exito {
+    max-height: 24px;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    margin: 2px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding-left: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2px;
+}
+
+.encabezado_extio p {
+    margin: 0;
+    line-height: 18px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.encabezado_exito img {
+    margin: auto 0;
+    margin-right: 10px;
+}
+
+
+/* ---------------- Contenido */
+
+.content_box_exito {
+    max-width: 365px;
+    max-height: 191px;
+    border: 1px inset #000;
+    background-color: gray;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.main_exito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.btnExito {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+.btnExito button {
+    margin-top: 21px;
+    width: 256px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.btnExito button a {
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.buttons_exito {
+    position: absolute;
+    bottom: 45px;
+    right: 45px;
+    width: 144px;
+    height: 36px;
+    display: inline-block;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin: auto 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+}
+
+.buttons_exito .btn_listoExito a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+
+/* ============================================ # Fin Pantalla Exito ==================================*/
 
 
 /* ============================================ MIS GIFOS =============================*/

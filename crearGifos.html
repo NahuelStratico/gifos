@@ -41,6 +41,7 @@
             <p>Crear Gifos</p>
         </div>
 
+        <!-- Pantalla inicio -->
         <div class="content_box">
 
             <div class="menu_content_box">
@@ -81,32 +82,141 @@
 
 
     <!-- Contenido Precaptura -->
-    <div class="box_precaptura" id="precaptura">
+    <div class="box_precaptura" id="pantallaPrecaptura">
         <div class="encabezado_precaptura">
-            <p>Un Chequeo Antes de Empezar</p>
+            <p id="parrafo">Un Chequeo Antes de Empezar</p>
             <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
         </div>
 
         <!-- Captura video -->
         <div class="content_box_precaptura" id="content_video">
-            <video id="recording" autoplay></video>
+            <video id="video" autoplay></video>
         </div>
 
 
         <!-- Button captura -->
         <div id="buttons_precaptura" class="buttons_precaptura">
             <div id="camera" class="camera">
-                <img src="assets/camera.svg" alt="camera">
+                <img id="icono" src="assets/camera.svg" alt="camera">
             </div>
-            <div id="recordButton" class="capturar" onclick="capturaGIF()">
+            <div id="recordButton" class="capturar">
                 <a href="#">Capturar</a>
             </div>
         </div>
     </div>
 
 
-    <!-- Mis Gifos Guardados -->
+    <!-- Contenido Captura -->
+    <div class="box_captura" id="pantallaCaptura">
+        <div class="encabezado_captura">
+            <p>Capturando Tu Guifo</p>
+            <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
+        </div>
 
+        <!-- Captura video -->
+        <div class="content_box_captura" id="content_video">
+            <video id="recording" autoplay></video>
+        </div>
+
+
+        <!-- Button captura -->
+        <div id="buttons_captura" class="buttons_captura">
+
+            <div id="cronometro">
+                <span>00:</span>
+                <span>00:</span>
+                <span>00</span>
+            </div>
+
+            <div>
+                <div id="camera_cap" class="camera_cap">
+                    <img id="icono" src="assets/camera.svg" alt="camera">
+                </div>
+                <div id="btnCaptura" class="cap">
+                    <a href="#">Listo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Guifos Creado -->
+    <div class="box_vista_previa" id="vistaPrevia">
+        <div class="encabezado_previa">
+            <p>Vista Previa</p>
+            <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
+        </div>
+
+        <!-- Captura video -->
+        <div class="content_box_previa" id="content_video">
+            <video id="recording" autoplay></video>
+        </div>
+
+
+        <!-- Button captura -->
+        <div id="buttons_previa" class="buttons_previa">
+
+            <div id="cronometro">
+                <span>00:</span>
+                <span>00:</span>
+                <span>00</span>
+            </div>
+
+            <div class="buttons_preview">
+                <div id="btnRepCap" class="btnRepCap">
+                    <a href="#">Repetir Captura</a>
+                </div>
+                <div id="btnSubir" class="btnPrevia">
+                    <a href="#">Subir Guifo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Guifo subido con exito -->
+    <div class="box_exito" id="exito">
+        <div class="encabezado_exito">
+            <p>Guifo Subido Con Exito</p>
+            <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
+        </div>
+
+
+        <div class="main_exito">
+            <!-- Captura video -->
+            <div class="content_box_exito" id="content_video">
+                <video id="recording" autoplay></video>
+            </div>
+
+            <div class="btnExito">
+                <p><strong>Guifo creado con éxito</strong></p>
+                <button>Copiar Enlace Guifo</button>
+                <button>Descargar Guifo</button>
+            </div>
+        </div>
+
+
+        <!-- Button captura -->
+        <div id="buttons_exito" class="buttons_exito">
+            <div id="btn_listoExito" class="btn_listoExito">
+                <a href="#">Listo</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Mis Gifos Guardados -->
     <div class="contenedor_mis_gifos">
         <div class="mis_gifos">
             <h4>Mis Gifos</h4>
