@@ -47,6 +47,10 @@ body {
     height: 64px;
 }
 
+video {
+    margin: auto;
+}
+
 
 /*  Pantalla 1 */
 
@@ -188,6 +192,7 @@ ol {
 /* OCULTANDO PRECAPTURA */
 
 #pantallaPrecaptura {
+    position: relative;
     display: none;
 }
 
@@ -413,7 +418,10 @@ ol {
     line-height: 18px;
 }
 
-#cronometro {
+.cronometro {
+    position: absolute;
+    bottom: 18px;
+    left: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -423,6 +431,10 @@ ol {
     background: #FFFFFF;
     border: 1px solid #979797;
     box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+
+#cronometro {
+    display: none;
 }
 
 

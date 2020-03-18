@@ -39,20 +39,20 @@ btnComenzar.addEventListener('click', () => {
 
 // ====================== Pantalla 2  / Capturar
 
-btnCapturar.addEventListener('click', () => {
-    pantallaPrecaptura.style.display = 'none';
-    pantallaListo.style.display = 'block';
+// btnCapturar.addEventListener('click', () => {
+//     pantallaPrecaptura.style.display = 'none';
+//     pantallaListo.style.display = 'block';
 
 
-});
+// });
 
 
 // ======================  Pantalla 3 /   -- Subir || Repetir
-btnCaptura.addEventListener('click', () => {
-    pantallaListo.style.display = 'none';
-    pantallaPrevia.style.display = 'block';
+// btnCaptura.addEventListener('click', () => {
+//     pantallaListo.style.display = 'none';
+//     pantallaPrevia.style.display = 'block';
 
-});
+// });
 
 
 // ===================== Repetir Guifo
@@ -94,8 +94,12 @@ video.style.display = 'block';
 async function capturaGIF() {
     if (recording) { // si se esta grabando se detiene la grabacion
         result = await stopRecording();
-        uploadGIF(result); // PASO 4 se carga el GIF grabado
+
+        resumenVideo(result);
+
+        // uploadGIF(result); // PASO 4 se carga el GIF grabado
     } else { // si no se esta grabando se inicia la grabacion
+
         startRecord();
     }
 }
@@ -118,10 +122,11 @@ async function startRecord() {
     recording = true; //el FLAG cambia a true para indicar que se esta grabando.  
 
     // Reemplazo boton Capturar por LISTO.
-    // let p = document.getElementById('parrafo').innerHTML = 'Capturando Tu Gifo';
-    // document.getElementById("recordButton").innerHTML = 'Listo';
-    // document.getElementById("recordButton").style.background = '#FF6161';
-    // document.getElementById("camera").style.background = '#FF6161';
+    let p = document.getElementById('parrafo').innerHTML = 'Capturando Tu Gifo';
+    document.getElementById("recordButton").innerHTML = 'Listo';
+    document.getElementById("recordButton").style.background = '#FF6161';
+    document.getElementById("camera").style.background = '#FF6161';
+    document.getElementById('cronometro').style.display = 'block';
 
     video.srcObject = stream;
     video.play();
@@ -133,11 +138,15 @@ async function stopRecording() {
     recorder.stopRecording();
     recording = false; //el FLAG vuelve a FALSE para detener la grabación. 
     video.pause();
+    pantallaPrecaptura.style.display = 'none';
+    pantallaPrevia.style.display = 'block';
     //----------------PASO 3---------------------------------           
     let blob = await recorder.getBlob();
     recorder.destroy();
     return blob;
+
     //----------------FIN PASO 3---------------------------------
+
 }
 
 async function uploadGIF(recordedGIF) { //PASO 4----------------
@@ -172,8 +181,9 @@ async function showUploadedGIF(gifId) { //PASO 5---------------------------
         preview.style.display = 'block';
         preview.src = uploadedGIFData.data.images.fixed_height.url;
 
+        // document.getElementById('cronometro').style.display = 'none';
 
-        document.getElementById("recordButton").innerHTML = 'Repetir Captura';
+        // document.getElementById("recordButton").innerHTML = 'Repetir Captura';
 
 
 
@@ -181,20 +191,10 @@ async function showUploadedGIF(gifId) { //PASO 5---------------------------
 }
 
 
-// Ocultando btn Captura y reemplazarlo por LISTO
-
-// let btnCaptura = document.getElementById('recordButton');
-// let precap = document.getElementById('precaptura');
-// let btnListo = document.getElementById('captura');
-
-// btnCaptura.addEventListener('click', () => {
-//     precap.style.display = 'none';
-//     btnListo.style.display = 'block';
-
-//     navigator.mediaDevices.getUserMedia({
-//             video: true,
-//             audio: false
-//         })
-//         .then(stream => video.srcObject = stream)
-//         .catch(console.error);
-// });
+// Mostrando el preview del guifo, antes de subir
+function resumenVideo(result) {
+    if (result.status == 200) {
+        let res = document.getElementById('resumen');
+        res.appendChild(result);
+    }
+}

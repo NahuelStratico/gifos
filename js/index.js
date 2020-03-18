@@ -6,10 +6,17 @@
 let searchForm = document.getElementById('search_form');
 let searchInput = document.getElementById('search');
 
+// GIF que cargan cuando el DOM este listo
 searchForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const query = searchInput.value;
     search(query);
+
+    // Deshabilito el panel cuando se ejecuta una busqueda.
+    document.getElementById('btnsearch').disabled = true;
+    document.getElementById('keyword').style.display = 'none';
+
+
 });
 
 
@@ -39,6 +46,152 @@ function search(query) {
 }
 
 
+
+
+// ===================== GIF Recomendados =====================
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    e.preventDefault();
+    const jonathan = 'Jonathan Vanness';
+    const sailor = 'sailor mercury';
+    const fib = 'fab Five';
+    const unic = 'Unicorns&Rainbows';
+
+    jonVanness(jonathan);
+    sailorMercury(sailor);
+    fabFive(fib);
+    unicornis(unic);
+});
+
+// #Vanness
+function jonVanness(jonathan) {
+    const apiKey = '3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&=';
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=${jonathan}`;
+    const vanness = document.getElementById('vanness');
+    fetch(path)
+        .then(res => res.json())
+        .then(json => {
+            console.log(json.data[0].images.fixed_width.url);
+
+            let resultadoHTML = '';
+            json.data.forEach(function(obj) {
+                console.log(obj);
+                const url = obj.images.fixed_width.url;
+                // let width = obj.images.fixed_width.width;
+                // let height = obj.images.fixed_width.height;
+                let title = obj.title;
+                resultadoHTML += `
+                
+                <p>#${title}</p>
+                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <button class="btnjonathan">Ver mas...</button>
+                
+                `;
+            });
+
+            vanness.innerHTML = resultadoHTML;
+        }).catch(function(error) {
+            console.log(error.message);
+        });
+
+}
+
+// #Sailor Mercury
+function sailorMercury(sailor) {
+    const apiKey = '3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&=';
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=${sailor}`;
+    const sailorM = document.getElementById('sailorM');
+    fetch(path)
+        .then(res => res.json())
+        .then(json => {
+            console.log(json.data[0].images.fixed_width.url);
+
+            let resultadoHTML = '';
+            json.data.forEach(function(obj) {
+                console.log(obj);
+                const url = obj.images.fixed_width.url;
+                // let width = obj.images.fixed_width.width;
+                // let height = obj.images.fixed_width.height;
+                let title = obj.title;
+                resultadoHTML += `
+                
+                <p>#${title}</p>
+                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <button class="btnSailor">Ver mas...</button>
+                
+                `;
+            });
+
+            sailorM.innerHTML = resultadoHTML;
+        }).catch(function(error) {
+            console.log(error.message);
+        });
+
+}
+
+// # Fab Fib
+function fabFive(fib) {
+    const apiKey = '3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&=';
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=${fib}`;
+    const fab = document.getElementById('fab');
+    fetch(path)
+        .then(res => res.json())
+        .then(json => {
+            console.log(json.data[0].images.fixed_width.url);
+
+            let resultadoHTML = '';
+            json.data.forEach(function(obj) {
+                console.log(obj);
+                const url = obj.images.fixed_width.url;
+                let width = obj.images.fixed_width.width;
+                let height = obj.images.fixed_width.height;
+                let title = obj.title;
+                resultadoHTML += `
+                
+                <p>#${title}</p>
+                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <button class="btnFab">Ver mas...</button>
+                
+                `;
+            });
+
+            fab.innerHTML = resultadoHTML;
+        }).catch(function(error) {
+            console.log(error.message);
+        });
+}
+
+// # Unicorns
+function unicornis(unic) {
+    const apiKey = '3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&=';
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=${unic}`;
+    const unico = document.getElementById('unicorns');
+    fetch(path)
+        .then(res => res.json())
+        .then(json => {
+            console.log(json.data[0].images.fixed_width.url);
+
+            let resultadoHTML = '';
+            json.data.forEach(function(obj) {
+                console.log(obj);
+                const url = obj.images.fixed_width.url;
+                let width = obj.images.fixed_width.width;
+                let height = obj.images.fixed_width.height;
+                let title = obj.title;
+                resultadoHTML += `
+                
+                <p>#${title}</p>
+                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <button class="btnUni">Ver mas...</button>
+                
+                `;
+            });
+
+            unico.innerHTML = resultadoHTML;
+        }).catch(function(error) {
+            console.log(error.message);
+        });
+}
 
 // ------------- Tendencias ---------------- ////////////
 
@@ -71,41 +224,7 @@ fetch(trendingApi)
 
 
 
-// document.addEventListener("DOMContentLoaded", init);
 
-// function init() {
-//     document.getElementById("btnsearch").addEventListener("click", ev => {
-//         ev.preventDefault(); // stop the page reload
-//         let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=`;
-//         let str = document.getElementById("search").value.trim();
-//         url = url.concat(str);
-//         console.log(url);
-//         fetch(url)
-//             .then(response => response.json())
-//             .then(content => {
-//                 // data , pagination , meta
-//                 console.log(content.data);
-//                 console.log('META', content.meta);
-//                 let fig = document.createElement('figure');
-//                 let img = document.createElement('img');
-//                 let fc = document.createElement('figcaption');
-//                 img.src = content.data[0].images.downsized.url;
-//                 img.alt = content.data[0].title;
-//                 fc.textContent = content.data[0].title;
-//                 fig.appendChild(img);
-//                 fig.appendChild(fc);
-//                 let out = document.querySelector('.out');
-//                 out.insertAdjacentElement('afterbegin', fig);
-//                 document.querySelector('#search').value = '';
-//             })
-//             .catch(err => {
-//                 console.log(err);
-//             })
-//     });
-// }
-
-
-// 
 
 // =============================== DARK MODE =========================================
 
@@ -140,34 +259,3 @@ btnDay.addEventListener('click', () => {
 
 
 // =============================== FIN #DARK MODE =========================================
-
-
-
-
-
-//  Dark Mode
-
-// const btnDay = document.querySelector('#day');
-// const btnNight = document.querySelector('#night');
-
-// inicializo la clase active
-// btnDay.classList.add('active');
-// btnNight.classList.add('dark');
-
-
-// cuando hago click en modo dia pasa lo siguiente:
-// btnDay.addEventListener('click', () => {
-// document.body.classList.add('active');
-// document.body.classList.remove('dark');
-//     btnDay.classList.add('active');
-//     btnNight.classList.remove('dark');
-// });
-
-// // cuando hago click en modo noche pasa lo siguiente:
-// btnNight.addEventListener('click', () => {
-// document.body.classList.add('dark');
-// document.body.classList.remove('active');
-//     btnNight.classList.add('dark');
-//     btnDay.classList.remove('active');
-
-// });

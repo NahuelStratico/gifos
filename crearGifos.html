@@ -90,37 +90,47 @@
 
         <!-- Captura video -->
         <div class="content_box_precaptura" id="content_video">
-            <video id="video" autoplay></video>
+            <video id="recording" autoplay></video>
         </div>
 
 
         <!-- Button captura -->
         <div id="buttons_precaptura" class="buttons_precaptura">
+
             <div id="camera" class="camera">
                 <img id="icono" src="assets/camera.svg" alt="camera">
             </div>
-            <div id="recordButton" class="capturar">
+            <div id="recordButton" class="capturar" onclick="capturaGIF()">
                 <a href="#">Capturar</a>
+            </div>
+
+        </div>
+
+        <div id="cronometro">
+            <div class="cronometro">
+                <span>00:</span>
+                <span>00:</span>
+                <span>00</span>
             </div>
         </div>
     </div>
 
 
     <!-- Contenido Captura -->
-    <div class="box_captura" id="pantallaCaptura">
+    <!-- <div class="box_captura" id="pantallaCaptura">
         <div class="encabezado_captura">
             <p>Capturando Tu Guifo</p>
             <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
-        </div>
+        </div> -->
 
-        <!-- Captura video -->
-        <div class="content_box_captura" id="content_video">
-            <video id="recording" autoplay></video>
-        </div>
+    <!-- Captura video -->
+    <!-- <div class="content_box_captura" id="content_video">
+            <video id="grabandoVideo"></video>
+        </div> -->
 
 
-        <!-- Button captura -->
-        <div id="buttons_captura" class="buttons_captura">
+    <!-- Button captura -->
+    <!-- <div id="buttons_captura" class="buttons_captura">
 
             <div id="cronometro">
                 <span>00:</span>
@@ -137,7 +147,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Guifos Creado -->
@@ -149,7 +159,7 @@
 
         <!-- Captura video -->
         <div class="content_box_previa" id="content_video">
-            <video id="recording" autoplay></video>
+            <div id="resume"></div>
         </div>
 
 

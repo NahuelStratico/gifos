@@ -311,6 +311,7 @@ body.dark .keyword {
     height: 150px;
     background: #E6E6E6;
     border-top: inset;
+    display: none;
 }
 
 .keysugerida {
@@ -327,6 +328,7 @@ body.dark .keyword {
 /* ------------------------------------------- Contenido Buscado por el usuario -------------------- */
 
 .contenido {
+    margin-top: 2rem;
     columns: 4;
     column-gap: 1em;
 }
@@ -358,65 +360,146 @@ body.dark .keyword {
 }
 
 
-/* ---------------------Cards */
+/*  ==============================  INICIO CARDS */
 
 .main_container {
-    columns: 4;
-    column-gap: 1em;
-    margin-top: 1rem;
-}
-
-.main_container #container {
-    position: relative;
-}
-
-
-/* .main_container {
     display: flex;
     flex-direction: row;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
+    justify-content: space-between;
+    height: 227px;
+    width: 100%;
 }
 
-#container {
-    /* position: absolute; */
 
+/* =============== Vanness */
 
-/* 
-margin: 1rem 1rem;
-display: flex;
-flex-direction: column;
-width: 240px;
-height: 263px;
-border: inset;
-box-sizing: border-box;
+#vanness {
+    margin: 0 1px;
+    position: relative;
+    height: 172px;
+    width: 200px;
+    text-align: center;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
 
-} */
-
-#container p {
+#vanness p {
     margin: 0;
     background: linear-gradient(90deg, #4180F6, #F7C9F3);
     font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: bold;
     color: #fff;
+    text-align: left;
 }
 
 .btnjonathan {
     position: absolute;
-    bottom: 15px;
+    bottom: -8px;
     left: 10px;
-    cursor: pointer;
-    width: 80px;
-    height: 30px;
+    width: 81px;
+    height: 34px;
     background: #4180F6;
+    cursor: pointer;
+}
+
+
+/* =============== SAILOR */
+
+#sailorM {
+    margin: 0 1px;
+    position: relative;
+    height: 172px;
+    width: 200px;
+    text-align: center;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+#sailorM p {
+    margin: 0;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
     color: #fff;
-    padding: 5px;
-    /* margin-top: -36px;
-    margin-left: 5px; */
+    text-align: left;
+}
+
+.btnSailor {
+    position: absolute;
+    bottom: -8px;
+    left: 10px;
+    width: 81px;
+    height: 34px;
+    background: #4180F6;
+    cursor: pointer;
+}
+
+
+/* =============== FAB FIVE */
+
+#fab {
+    margin: 0 1px;
+    position: relative;
+    height: 172px;
+    width: 200px;
+    text-align: center;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+#fab p {
+    margin: 0;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+.btnFab {
+    position: absolute;
+    bottom: -8px;
+    left: 10px;
+    width: 81px;
+    height: 34px;
+    background: #4180F6;
+    cursor: pointer;
+}
+
+
+/* =============== Unicorns */
+
+#unicorns {
+    margin: 0 1px;
+    position: relative;
+    height: 172px;
+    width: 200px;
+    text-align: center;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+#unicorns p {
+    margin: 0;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+.btnUni {
+    position: absolute;
+    bottom: -8px;
+    left: 10px;
+    width: 81px;
+    height: 34px;
+    background: #4180F6;
+    cursor: pointer;
 }
 
 
