@@ -77,8 +77,6 @@ function jonVanness(jonathan) {
             json.data.forEach(function(obj) {
                 console.log(obj);
                 const url = obj.images.fixed_width.url;
-                // let width = obj.images.fixed_width.width;
-                // let height = obj.images.fixed_width.height;
                 let title = obj.title;
                 resultadoHTML += `
                 

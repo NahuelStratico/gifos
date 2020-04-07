@@ -434,7 +434,7 @@ ol {
 }
 
 #cronometro {
-    display: none;
+    display: block;
 }
 
 
@@ -527,6 +527,16 @@ ol {
     flex-direction: row;
 }
 
+/* ---------------- CRONOMETRO VISTA PREVIA */
+
+.crono{
+    margin-left: 2rem;
+    /* margin-top: 10px; */
+    background: #FFFFFF;
+    padding: .4em;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
 
 /* --------------- Button Repetir Captura*/
 

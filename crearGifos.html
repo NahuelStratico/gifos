@@ -121,7 +121,7 @@
         <div class="encabezado_captura">
             <p>Capturando Tu Guifo</p>
             <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
-        </div> -->
+        </div>  -->
 
     <!-- Captura video -->
     <!-- <div class="content_box_captura" id="content_video">
@@ -147,10 +147,10 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
-    <!-- Guifos Creado -->
+     <-- Guifos Creado -->
     <div class="box_vista_previa" id="vistaPrevia">
         <div class="encabezado_previa">
             <p>Vista Previa</p>
@@ -159,14 +159,16 @@
 
         <!-- Captura video -->
         <div class="content_box_previa" id="content_video">
-            <div id="resume"></div>
+            <!-- <div id="resume"></div> -->
+            <!-- <video id="resume" ></video> -->
+            <img id="resume" style="width: 100%; height: 100%;"/>
         </div>
 
 
         <!-- Button captura -->
         <div id="buttons_previa" class="buttons_previa">
 
-            <div id="cronometro">
+            <div id="cronometro" class="crono">
                 <span>00:</span>
                 <span>00:</span>
                 <span>00</span>
@@ -177,9 +179,10 @@
                     <a href="#">Repetir Captura</a>
                 </div>
                 <div id="btnSubir" class="btnPrevia">
-                    <a href="#">Subir Guifo</a>
+                    <a href="#" onclick="uploadGIF()">Subir Guifo</a>
                 </div>
             </div>
+
         </div>
     </div>
 

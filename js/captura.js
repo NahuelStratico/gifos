@@ -60,14 +60,23 @@ btnComenzar.addEventListener('click', () => {
 btnRepetir.addEventListener('click', () => {
     pantallaPrevia.style.display = 'none';
     pantallaPrecaptura.style.display = 'block';
+
+    document.getElementById('parrafo').innerHTML = 'Un Chequeo Antes de Empezar';
+    document.getElementById("recordButton").innerHTML = 'Capturar';
+    document.getElementById("recordButton").style.background = '#F7C9F3';
+    document.getElementById("camera").style.background = '#F7C9F3';
+    document.getElementById('cronometro').style.display = 'none';
+
 });
 
 // ====================== Pantalla 4 /
 
 // ===================== Pantalla Cargado con Exito
-btnSubir.addEventListener('click', () => {
+btnSubir.addEventListener('click',() => {
+
     pantallaPrevia.style.display = 'none';
     pantallaExito.style.display = 'block';
+
 });
 
 
@@ -94,8 +103,9 @@ video.style.display = 'block';
 async function capturaGIF() {
     if (recording) { // si se esta grabando se detiene la grabacion
         result = await stopRecording();
+        
+        // console.log(data);
 
-        resumenVideo(result);
 
         // uploadGIF(result); // PASO 4 se carga el GIF grabado
     } else { // si no se esta grabando se inicia la grabacion
@@ -142,6 +152,16 @@ async function stopRecording() {
     pantallaPrevia.style.display = 'block';
     //----------------PASO 3---------------------------------           
     let blob = await recorder.getBlob();
+    let url = URL.createObjectURL(blob);
+    
+    console.log(url);
+
+    let img = document.getElementById('resume');
+
+    img.src = url;
+    
+    document.getElementById('cronometro').style.display ='block';
+
     recorder.destroy();
     return blob;
 
@@ -149,7 +169,12 @@ async function stopRecording() {
 
 }
 
+
+
 async function uploadGIF(recordedGIF) { //PASO 4----------------
+    
+    console.log('se esta ejecutando la funcion uploadGIF');
+    
     let form = new FormData();
     form.append("file", recordedGIF, 'example.gif');
     let result = await fetch('https://upload.giphy.com/v1/gifs?api_key=' + apiKey, {
@@ -160,6 +185,7 @@ async function uploadGIF(recordedGIF) { //PASO 4----------------
         let parsedResult = await result.json();
         let gifId = parsedResult.data.id;
         alert("GIF cargado con exito");
+        console.log(gifId);
         showUploadedGIF(gifId);
         video.style.display = 'none';
     } else {
@@ -193,7 +219,7 @@ async function showUploadedGIF(gifId) { //PASO 5---------------------------
 
 // Mostrando el preview del guifo, antes de subir
 function resumenVideo(result) {
-    if (result.status == 200) {
+    if (result == 1) {
         let res = document.getElementById('resumen');
         res.appendChild(result);
     }
