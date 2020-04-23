@@ -136,7 +136,7 @@ async function startRecord() {
     document.getElementById("recordButton").innerHTML = 'Listo';
     document.getElementById("recordButton").style.background = '#FF6161';
     document.getElementById("camera").style.background = '#FF6161';
-    document.getElementById('cronometro').style.display = 'block';
+    // document.getElementById('cronometro').style.display = 'block';
 
     video.srcObject = stream;
     video.play();
@@ -217,10 +217,3 @@ async function showUploadedGIF(gifId) { //PASO 5---------------------------
 }
 
 
-// Mostrando el preview del guifo, antes de subir
-function resumenVideo(result) {
-    if (result == 1) {
-        let res = document.getElementById('resumen');
-        res.appendChild(result);
-    }
-}

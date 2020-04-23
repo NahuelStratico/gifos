@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS - Stratico Nahuel</title>
+
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:300,400,500,600,700&display=swap" rel="stylesheet">
+
+     <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/afecc65938.js"></script>
+ 
+     <!-- CSS GIFO -->
+     <link rel="stylesheet" href="css/gifo.css">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <div class="cabecera">¡Bienvenidos/as a Guifos.com!------Donde los gifs están//////Numero de visitas:</div>
+
+    <!-- Arrow  -->
+    <div class="arrow">
+        <a href="index.html">
+            <img src="assets/arrow.svg" alt="arrow">
+        </a>
+    </div>
+
+    <!-- Logo -->
+    <a href="#" class="logo">
+        <img src="assets/gifOF_logo.png" alt="Logo">
+    </a>
+    
+    <!-- State 1 // Creando Gifo -->
+    <div class="box" id="crearGifo">
+
+        <div class="encabezado">
+            <h3>Crear Gifos</h3>
+        </div>
+
+        <!-- Pantalla inicio -->
+        <div class="content_box">
+
+            <div class="menu_content_box">
+
+                <div class="img">
+                    <img src="assets/window img.png" alt="imgWindows">
+                </div>
+
+                <div class="description">
+
+                    <h4>Aquí podras crear tus propios guifos</h4>
+
+                    <p>Crear tus <strong>guifos</strong> es muy facil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tus guifos son:</p>
+
+                    <ol>
+                        <li>Dar permisos de acceso a la cámara (sólo por el tiempo de uso</li>
+                        <li>Capturar tu momento guifo</li>
+                        <li>Revisar el momento</li>
+                        <li>Listo para subir y compartir!</li>
+                    </ol>
+                    <p>¿Quéres comenzar a crear tus <strong> guifos </strong> hora?</p>
+
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                <div class="cancelar">
+                    <a href="index.html">Cancelar</a>
+                </div>
+                <div id="comenzar" class="comenzar">
+                    <a href="#">Comenzar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+      <!-- Capturando Gifo -->
+    <div class="box crear-gif hidden" id="captura">
+
+        <div id="stage2">
+            <div class="encabezado title_stage">
+                <h3 id="title_header">Un chequeo antes de empezar</h3>
+            </div>
+            <div class="content_box_precaptura">
+                <video id="video-start" autoplay></video>
+                <img id="img-previa" class=" preview hidden"/>
+            </div>
+            
+
+             <!-- Button Captura -->
+            <div class="btn_group" id="btn_captura__group">
+                <div id="cronometro hidden">
+                    <div class="cronometro">
+                        <span>00:</span>
+                        <span>00:</span>
+                        <span>00</span>
+                    </div>
+                </div>
+                <div>
+                    <div id="camera" class="camera">
+                        <img id="icono" src="assets/camera.svg" alt="camera">
+                    </div>
+                    <button id="start-recording" class="captura" onclick="startRecord()">
+                        <span class="text_btn">Capturar</span> 
+                    </button>
+                    <button id="stop-recording" class="btn_stop" onclick="stopRecording()"> 
+                        <span class="text_btn">Stop</span> 
+                    </button>
+                </div>
+
+                <div class="stage-upload hidden" id="stage-upload">
+                    <button id="repetir-gifo" class="btn_repetir" onclick="repeCap()">
+                        <span class="text_btn">Repetir Captura</span> 
+                    </button>
+                    <button id="upload-gifo"  class="btn_subir" onclick="subir()">
+                        <span class="text_btn">Subir Gifo</span> 
+                    </button>
+                </div>
+
+               
+            </div>  
+        </div>
+
+        <div class="container_two hidden" id="stage3">
+            <div class="title_stage">
+                <h3>Guifo creado con exito</h3>
+            </div>
+            <div class="window-element__content gif-creation--stage6">
+                <div class="window-element__content--split gif-creation--stage6--split">
+                    <div class="img-container">
+                        <img alt="Tu Gif" id="gif-preview" class="video-preview-img" />
+                    </div>
+                    <div>
+                        <div class="gif-creation--stage6__options-container">
+                            <p class="gif-creation--stage6__options-container__header">Guifo creado con éxito</p>
+                            <button class="btn btn--secondary btn--full-width" id="copy-link">
+                                <span class="btn__text-container">Copiar Enlace Guifo</span>
+                            </button>
+                            <button class="btn btn--secondary btn--full-width" id="download-gif">
+                                <span class="btn__text-container">Descargar Guifo</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-element__content__options">
+                    <button class="btn btn--primary close-window">
+                        <span class="btn__text-container">Listo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- subiendo Gifo -->
+    <div class="box subiendo_gifo hidden" id="subiendo">
+        <div class="encabezado title_stage">
+            <h3 id="title_header">Subiendo Guifo</h3>
+        </div>
+        <div class="subiendo_content">
+            <div class="icon_content">
+                <div class="icon">
+                    <img src="./assets/globe_img.png" alt="Globo">
+                </div>
+                <h5>Estamos subiendo tu guifo...</h5>
+            </div>
+            <div class="progress_container">
+                <div class="progress" id="progress">
+                    <!-- <progress value=0 max=100 id="barra" class="barra-style"></progress> -->
+                </div>
+            </div>
+
+            <div class="bar_progres">
+                <p>Tiempo restante <span class="strikethrough">38 años</span> algunos minutos.</p>
+            </div>
+        </div>
+        <div class="btn_group_subiendo">
+            <button class="btn_subiendo_cancelar">
+                <span>Cancelar</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Exito -->
+    <div class="box exito hidden" id="exito">
+        <div class="encabezado title_stage">
+            <h3 id="title_header">Guifo Subido con Exito</h3>
+        </div>
+        <div class="exito_content">
+            <div class="img_content">
+                <img id="img_final" src="" alt="">
+            </div>
+            <div class="btn_group_exito">
+                <h6>Guifo Creado con exito</h6>
+                <button class="btn_exito" onclick="copyGifLink()" id="copiarEnlace">Copiar Enlace Guifo</button>
+                <button class="btn_exito" onclick="downloadGif()" >Descargar Guifo</button>
+            </div>
+        </div>
+        <div class="btn_group_exito_listo">
+            <button class="btn_exito_listo" id="btn_exito__listo">
+                <span>Listo</span>
+            </button>
+        </div>
+    </div>
+
+     <!-- Mis Gifos Guardados -->
+     <div class="contenedor_mis_gifos" id="gifos_container">
+        <div class="my_gif_title">
+            <h4>Mis Gifos</h4>
+        </div>
+        <div class="gif-grid-content" id="my-gifs-grid">
+            <img id="uploadedGIF" />
+            <!-- localStorage.getItem -->
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="./js/gifo.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+</body>
+</html>

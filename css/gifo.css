@@ -1,0 +1,452 @@
+* {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF4FD;
+}
+
+/* Estilos generales */
+.hidden{
+    display: none;
+}
+
+/* ----------------------   Cabecera inicial ----------------------*/
+
+.cabecera {
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    height: 23px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    color: #fff;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 8px;
+}
+
+
+/* ---------------- Arrow */
+
+.arrow {
+    position: absolute;
+    top: 79px;
+    left: 60px;
+    max-width: 24px;
+    max-height: 24px;
+}
+
+
+/* ---------------- Logo */
+
+.logo {
+    position: absolute;
+    top: 66px;
+    left: 91px;
+    width: 102.6px;
+    height: 64px;
+}
+
+/* ============================================ STATE 1 =============================*/
+
+
+/* --------------------------------   BOX ----------------------*/
+
+.box {
+    width: 684px;
+    min-height: 386px;
+    margin: 153px auto;
+    background-color: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    -moz-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    margin-bottom: 153px;
+}
+
+/* ---------------- Encabezado */
+
+.encabezado {
+    max-height: 24px;
+    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    margin: 2px;
+    font-family: ChakraPetch-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    padding-left: 7px;
+}
+
+.encabezado h3 {
+    margin: 0;
+}
+
+/* ---------------- Contenido */
+
+.menu_content_box {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 93px 30px 25px;
+}
+
+.description {
+    margin: 0 0 0 16px;
+}
+
+.description h4 {
+    margin-bottom: 17px;
+}
+
+.description p,
+ol {
+    font-family: ChakraPetch-Regular;
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.description p {
+    margin-bottom: 15px;
+}
+
+.description li {
+    margin-bottom: 15px;
+    margin-left: 16px;
+}
+
+.description li::before {
+    content: ")";
+    margin-right: 4px;
+    margin-left: -2px;
+    font-weight: bold;
+}
+
+/* ---------------- Bottons */
+
+.buttons {
+    display: block;
+    text-align: right;
+    padding: 0 2rem 2rem 0;
+}
+
+.buttons .cancelar {
+    display: inline;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    cursor: pointer;
+}
+
+.buttons .cancelar a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+.buttons .comenzar {
+    display: inline;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.buttons .comenzar a {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-weight: 500;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+/* ============================================ STATE 2 =============================*/
+
+#stage2 .preview{
+    width: 100%;
+    height: 434px;
+}
+
+.cronometro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+
+#cronometro {
+    display: block;
+}
+/* ---------------- Contenido */
+
+.content_box_precaptura {
+    max-width: 832px;
+    max-height: 434px;
+    border: 1px inset #000;
+    background-color: gray;
+    margin: 1rem;
+    overflow: hidden;
+}
+.content_box_precaptura video{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ---------------- Bottons Comenzar y Stop*/
+
+.btn_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem 1rem 1rem;
+}
+
+
+.camera {
+    height: 36px;
+    display: inline-block;
+    padding: 7px 15.5px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-right: -5px;
+    border-right: none;
+}
+
+.camera img {
+    width: 13.5px;
+    height: 10.5px;
+}
+
+.btn_group .captura {
+    width: 144px;
+    height: 36px;
+    display: inline-block;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.btn_group .captura span {
+    text-decoration: none;
+    font-family: ChakraPetch-Regular;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+.btn_group .btn_stop{
+    width: 144px;
+    height: 36px;
+    display: inline-block;
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    padding: 9px 39.5px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+
+/* ---------------- Bottons repetir y subir*/
+
+.btn_repetir{
+    width: 144px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.btn_subir{
+    width: 144px;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+
+
+/* ============================================ SUBIENDO =============================*/
+
+
+.subiendo_content{
+    width:95%;
+    height: 434px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+
+}
+
+.icon_content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 139px;
+}
+.btn_group_subiendo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 1rem 1rem 1rem;
+}
+.btn_subiendo_cancelar{
+    margin-top: 21px;
+    width: 144px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.bar_progres .strikethrough {
+	text-decoration: line-through;
+}
+.progress_container{
+    width: 200px;
+    height: 20px;
+    background: #999999;
+    border: 1px inset;
+    /* background: #999999;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000; */
+    margin: 1em 0;
+}
+.progress{
+    width: 1%;
+    height: 17px;
+    background: #F7C9F3;
+    margin-left: 1px;
+}
+
+
+/* ============================================ EXITO =============================*/
+
+.exito_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+.img_content{
+    width: 365px;
+    height:191px;
+}
+.img_content img{
+    width: 100%;
+    height: 100%;
+}
+.btn_group_exito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.btn_group_exito .btn_exito{
+    width: 256px;
+    height: 36px;
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.btn_group_exito h6{
+    font-size: 1em;
+    font-family: 'ChakraPetch';
+    margin-right: auto;
+}
+.btn_group_exito_listo{
+    position: relative;
+    display: block;
+    text-align: right;
+    padding: 0 1.4rem 1rem 0;
+}
+.btn_exito_listo{
+    width: 144px;
+    height: 36px;
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ============================================ MIS GIFOS =============================*/
+
+.contenedor_mis_gifos {
+    margin: 3rem 4rem;
+}
+
+.my_gif_title {
+    margin: 4rem 0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: #E6E6E6;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border: inset;
+    padding: 5px;
+}
+
+.my_gif_title h4 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #110038;
+}
+
+.gif-grid-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: .5rem;
+}
+
+.gif-grid-content img{
+    margin-right: .5rem;
+    height: 298px;
+    width: 288px;
+    margin: 0 1rem 1rem;
+}
+
+
+/* ============================================  FIN MIS GIFOS =============================*/

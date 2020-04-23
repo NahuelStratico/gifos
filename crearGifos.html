@@ -100,13 +100,22 @@
             <div id="camera" class="camera">
                 <img id="icono" src="assets/camera.svg" alt="camera">
             </div>
-            <div id="recordButton" class="capturar" onclick="capturaGIF()">
+            <div id="recordButton" class="capturar">
                 <a href="#">Capturar</a>
+            </div>
+
+            <div class="buttons_preview hidden">
+                <div id="btnRepCap" class="btnRepCap">
+                    <a href="#">Repetir Captura</a>
+                </div>
+                <div id="btnSubir" class="btnPrevia">
+                    <a href="#" >Subir Guifo</a>
+                </div>
             </div>
 
         </div>
 
-        <div id="cronometro">
+        <div id="cronometro hidden">
             <div class="cronometro">
                 <span>00:</span>
                 <span>00:</span>
@@ -151,22 +160,22 @@
 
 
      <-- Guifos Creado -->
-    <div class="box_vista_previa" id="vistaPrevia">
+    <!-- <div class="box_vista_previa" id="vistaPrevia">
         <div class="encabezado_previa">
             <p>Vista Previa</p>
             <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
-        </div>
+        </div> -->
 
         <!-- Captura video -->
-        <div class="content_box_previa" id="content_video">
+        <!-- <div class="content_box_previa" id="content_video"> -->
             <!-- <div id="resume"></div> -->
             <!-- <video id="resume" ></video> -->
-            <img id="resume" style="width: 100%; height: 100%;"/>
-        </div>
+            <!-- <img id="resume" style="width: 100%; height: 100%;"/> -->
+        <!-- </div> -->
 
 
         <!-- Button captura -->
-        <div id="buttons_previa" class="buttons_previa">
+        <!-- <div id="buttons_previa" class="buttons_previa">
 
             <div id="cronometro" class="crono">
                 <span>00:</span>
@@ -179,18 +188,18 @@
                     <a href="#">Repetir Captura</a>
                 </div>
                 <div id="btnSubir" class="btnPrevia">
-                    <a href="#" onclick="uploadGIF()">Subir Guifo</a>
+                    <a href="#" >Subir Guifo</a>
                 </div>
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
 
 
     <!-- Guifo subido con exito -->
-    <div class="box_exito" id="exito">
+    <div class="box_exito hidden" id="exito" >
         <div class="encabezado_exito">
             <p>Guifo Subido Con Exito</p>
             <img id="close" width="16px" height="14px" src="assets/button3.svg" alt="Close">
