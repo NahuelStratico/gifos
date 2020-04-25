@@ -27,11 +27,11 @@ function search(query) {
     fetch(path)
         .then(res => res.json())
         .then(json => {
-            console.log(json.data[0].images.fixed_width.url);
+            // console.log(json.data[0].images.fixed_width.url);
 
             let resultadoHTML = '';
             json.data.forEach(function(obj) {
-                console.log(obj);
+                // console.log(obj);
                 const url = obj.images.fixed_width.url;
                 let width = obj.images.fixed_width.width;
                 let height = obj.images.fixed_width.height;
@@ -71,11 +71,11 @@ function jonVanness(jonathan) {
     fetch(path)
         .then(res => res.json())
         .then(json => {
-            console.log(json.data[0].images.fixed_width.url);
+            // console.log(json.data[0].images.fixed_width.url);
 
             let resultadoHTML = '';
             json.data.forEach(function(obj) {
-                console.log(obj);
+                // console.log(obj);
                 const url = obj.images.fixed_width.url;
                 let title = obj.title;
                 resultadoHTML += `
@@ -102,11 +102,11 @@ function sailorMercury(sailor) {
     fetch(path)
         .then(res => res.json())
         .then(json => {
-            console.log(json.data[0].images.fixed_width.url);
+            // console.log(json.data[0].images.fixed_width.url);
 
             let resultadoHTML = '';
             json.data.forEach(function(obj) {
-                console.log(obj);
+                // console.log(obj);
                 const url = obj.images.fixed_width.url;
                 // let width = obj.images.fixed_width.width;
                 // let height = obj.images.fixed_width.height;
@@ -135,11 +135,11 @@ function fabFive(fib) {
     fetch(path)
         .then(res => res.json())
         .then(json => {
-            console.log(json.data[0].images.fixed_width.url);
+            // console.log(json.data[0].images.fixed_width.url);
 
             let resultadoHTML = '';
             json.data.forEach(function(obj) {
-                console.log(obj);
+                // console.log(obj);
                 const url = obj.images.fixed_width.url;
                 let width = obj.images.fixed_width.width;
                 let height = obj.images.fixed_width.height;
@@ -167,11 +167,11 @@ function unicornis(unic) {
     fetch(path)
         .then(res => res.json())
         .then(json => {
-            console.log(json.data[0].images.fixed_width.url);
+            // console.log(json.data[0].images.fixed_width.url);
 
             let resultadoHTML = '';
             json.data.forEach(function(obj) {
-                console.log(obj);
+                // console.log(obj);
                 const url = obj.images.fixed_width.url;
                 let width = obj.images.fixed_width.width;
                 let height = obj.images.fixed_width.height;
@@ -204,7 +204,7 @@ fetch(trendingApi)
 
         let resultadoHTML = '';
         json.data.forEach(function(object) {
-            console.log(object);
+            // console.log(object);
             const url = object.images.fixed_width.url;
             let width = object.images.fixed_width.width;
             let height = object.images.fixed_width.height;
