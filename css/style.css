@@ -138,6 +138,7 @@ body.dark .main-menu-link {
 
 body.dark .mis-gifos {
     color: #ffffff;
+
 }
 
 body.dark .mis-gifos:hover {
@@ -390,36 +391,46 @@ body.dark .keyword {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 227px;
+    height: auto;
     width: 100%;
 }
 
 
 /* =============== Vanness */
 
-#vanness {
-    margin: 0 1px;
+#vanness{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 286px;
+    height: 296px;
     position: relative;
-    height: 172px;
-    width: 200px;
-    text-align: center;
-    background: #E6E6E6;
+    margin: 0 .2rem 0 .2rem;
+    padding: 5px;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
-#vanness p {
+#vanness:hover{
+    border: dashed;
+}
+
+
+#vanness p{
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     margin: 0;
-    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    width: 100%;
+    color: #fff;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
-    text-align: left;
 }
-
-.btnjonathan {
+.img-vanness{
+    width: 100%;
+    height: 248px;
+}
+.btnjonathan{
     position: absolute;
-    bottom: -8px;
+    bottom: 22px;
     left: 10px;
     width: 81px;
     height: 34px;
@@ -431,28 +442,37 @@ body.dark .keyword {
 /* =============== SAILOR */
 
 #sailorM {
-    margin: 0 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 286px;
+    height: 296px;
     position: relative;
-    height: 172px;
-    width: 200px;
-    text-align: center;
-    background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    padding: 5px;
+    margin: 0 .2rem 0 .2rem;
+}
+#sailorM:hover{
+    border: dashed;
+}
+.img-saylor{
+    width: 100%;
+    height: 266px;
 }
 
 #sailorM p {
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     margin: 0;
-    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    width: 100%;
+    color: #fff;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
-    text-align: left;
 }
 
 .btnSailor {
     position: absolute;
-    bottom: -8px;
+    bottom: 22px;
     left: 10px;
     width: 81px;
     height: 34px;
@@ -464,28 +484,38 @@ body.dark .keyword {
 /* =============== FAB FIVE */
 
 #fab {
-    margin: 0 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 286px;
+    height: 296px;
     position: relative;
-    height: 172px;
-    width: 200px;
-    text-align: center;
-    background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    padding: 5px;
+    margin: 0 .2rem 0 .2rem;
+}
+
+#fab:hover{
+    border: dashed;
+}
+.img-fab{
+    width: 100%;
+    height: 266px;
 }
 
 #fab p {
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     margin: 0;
-    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    width: 100%;
+    color: #fff;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
-    text-align: left;
 }
 
 .btnFab {
     position: absolute;
-    bottom: -8px;
+    bottom: 22px;
     left: 10px;
     width: 81px;
     height: 34px;
@@ -497,28 +527,38 @@ body.dark .keyword {
 /* =============== Unicorns */
 
 #unicorns {
-    margin: 0 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 286px;
+    height: 296px;
     position: relative;
-    height: 172px;
-    width: 200px;
-    text-align: center;
-    background: #E6E6E6;
     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    padding: 5px;
+    margin: 0 .2rem 0 .2rem;
+}
+
+#unicorns:hover{
+    border: dashed;
+}
+.img-uni{
+    width: 100%;
+    height: 266px;
 }
 
 #unicorns p {
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
     margin: 0;
-    background: linear-gradient(90deg, #4180F6, #F7C9F3);
+    width: 100%;
+    color: #fff;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
-    text-align: left;
 }
 
 .btnUni {
     position: absolute;
-    bottom: -8px;
+    bottom: 22px;
     left: 10px;
     width: 81px;
     height: 34px;
@@ -534,6 +574,35 @@ body.dark .keyword {
     column-gap: 1em;
 }
 
+
 .item {
-    margin-bottom: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.container_api_tendencia{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 286px;
+    height: 296px;
+    position: relative;
+    margin-bottom: .5rem;
+}
+.container_api_tendencia:hover{
+    border: dashed;
+}
+
+.container_api_tendencia:hover .title_tendencia{
+    display: block;
+}
+
+.title_tendencia{
+    display: none;
+    background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
 }

@@ -81,7 +81,7 @@ function jonVanness(jonathan) {
                 resultadoHTML += `
                 
                 <p>#${title}</p>
-                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <img class="img-vanness" src="${url}"/> 
                 <button class="btnjonathan">Ver mas...</button>
                 
                 `;
@@ -114,7 +114,7 @@ function sailorMercury(sailor) {
                 resultadoHTML += `
                 
                 <p>#${title}</p>
-                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <img class="img-saylor" src="${url}"/> 
                 <button class="btnSailor">Ver mas...</button>
                 
                 `;
@@ -147,7 +147,7 @@ function fabFive(fib) {
                 resultadoHTML += `
                 
                 <p>#${title}</p>
-                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <img class="img-fab" src="${url}"/> 
                 <button class="btnFab">Ver mas...</button>
                 
                 `;
@@ -173,13 +173,13 @@ function unicornis(unic) {
             json.data.forEach(function(obj) {
                 // console.log(obj);
                 const url = obj.images.fixed_width.url;
-                let width = obj.images.fixed_width.width;
-                let height = obj.images.fixed_width.height;
+                // let width = obj.images.fixed_width.width;
+                // let height = obj.images.fixed_width.height;
                 let title = obj.title;
                 resultadoHTML += `
                 
                 <p>#${title}</p>
-                <img class="img" src="${url}" width="200px" height="172px"/> 
+                <img class="img-uni" src="${url}"/> 
                 <button class="btnUni">Ver mas...</button>
                 
                 `;
@@ -206,10 +206,15 @@ fetch(trendingApi)
         json.data.forEach(function(object) {
             // console.log(object);
             const url = object.images.fixed_width.url;
-            let width = object.images.fixed_width.width;
-            let height = object.images.fixed_width.height;
-            // let title = obj.title;
-            resultadoHTML += `<img class="item" src="${url}" width="${width}" height="${height}">`;
+            // let width = object.images.fixed_width.width;
+            // let height = object.images.fixed_width.height;
+            let title = object.title;
+            resultadoHTML += `
+            <div class="container_api_tendencia">
+                <img class="item" src="${url}" />
+                <p class="title_tendencia">${title}</p>
+            </div>
+            `;
         });
         trending.innerHTML = resultadoHTML;
 
