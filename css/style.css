@@ -7,6 +7,9 @@ html {
     background: #FFF4FD;
 }
 
+.hidden{
+    display: none;
+}
 
 /* ----------------------   Cabecera inicial ----------------------*/
 
@@ -62,6 +65,56 @@ html {
     align-items: center;
 }
 
+.mis-gifos{
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+
+/* ============================================ MIS GIFOS =============================*/
+
+
+.my_gif_title {
+    margin: 4rem 0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    background: #E6E6E6;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border: inset;
+    padding: 5px;
+}
+
+.my_gif_title h4 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #110038;
+}
+
+.gif-grid-content{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: .5rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: stretch; 
+    column-gap: 5px;
+}
+
+.gif-grid-content img{
+    /* margin-right: .5rem;
+    margin: 0 1rem 1rem; */
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* ============================================  FIN MIS GIFOS =============================*/
 
 /* ========================================= DARK MODE  =============================================*/
 
@@ -76,6 +129,7 @@ html {
 
 .dark {
     background: #110038;
+    height: 100vh;
 }
 
 
@@ -137,6 +191,7 @@ body.dark .main-menu-link {
 }
 
 body.dark .mis-gifos {
+    box-sizing: border-box;
     color: #ffffff;
 
 }
@@ -180,6 +235,8 @@ body.dark .keyword {
 
 
 /* ========================================= # FIN DARK MODE  =============================================*/
+
+
 
 
 /* -------------------------- Menu */
@@ -259,7 +316,6 @@ body.dark .keyword {
     margin: 0 20px;
     font-size: 1em;
     margin-right: 0;
-    transition: .3s;
 }
 
 .main-menu .mis-gifos:hover {
@@ -310,6 +366,7 @@ body.dark .keyword {
     width: 102px;
     height: 36px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 
@@ -353,15 +410,39 @@ body.dark .keyword {
 /* ------------------------------------------- Contenido Buscado por el usuario -------------------- */
 
 .contenido {
-    margin-top: 2rem;
-    columns: 4;
-    column-gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: .5rem 0;
+    justify-items: stretch;
 }
+
 
 .item {
     margin-bottom: 1em;
 }
-
+.search__tags{
+    margin: .5rem .2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.tag_content{
+    width: 100px;
+    height: 34px;
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+    font-family: ChakraPetch-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 33px;
+    text-align: center;
+    margin: 1rem .2rem;
+}
 
 /* ------------------------------------------- Hoy te sugerimos -----------------------  */
 
@@ -570,8 +651,9 @@ body.dark .keyword {
 /* ---------------------------------------- tendencias ------------------------*/
 
 .trending {
-    columns: 4;
-    column-gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
 }
 
 
@@ -584,8 +666,8 @@ body.dark .keyword {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    width: 286px;
-    height: 296px;
+    width: 276px;
+    height: 286px;
     position: relative;
     margin-bottom: .5rem;
 }
@@ -605,4 +687,7 @@ body.dark .keyword {
     left: 0;
     margin: 0;
     width: 100%;
+    padding-left: 5px;
+    box-sizing: border-box;
+    color: #fff;
 }

@@ -29,7 +29,7 @@
             <!-- Logo -->
 
             <div class="main-nav-content">
-                <a href="#" class="logo">
+                <a href="#" class="logo" id="logo">
                     <img id="logo_white" src="assets/gifOF_logo.png" alt="Logo">
                     <img id="logo_dark" src="assets/gifOF_logo_dark.png" alt="Logo">
                 </a>
@@ -68,82 +68,96 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="main-menu-item">
-                        <a class="mis-gifos" href="#">
-                            Mis Guifos
-                        </a>
-                    </li>
+                    <a class="mis-gifos" id="btn_mis_gifos" href="#">
+                        Mis Guifos
+                    </a>
                 </ul>
             </div>
         </nav>
 
-        <!-- /////////  Buscardor ///////// -->
+        <!-- Mis Gifos Guardados -->
+        <div class="contenedor_mis_gifos hidden" id="gifos_container">
+            <div class="my_gif_title">
+                <h4>Mis Gifos</h4>
+            </div>
+            <div class="gif-grid-content" id="my-gifs-grid">
+                <img id="uploadedGIF" class="hidden"/>
+                <!-- localStorage.getItem -->
+            </div>
+        </div>
 
-        <div class="buscador">
-            <div class="title-buscar"><span>Buscar</span></div>
-            <form id="search_form">
-                <div class="content-buscar">
-                    <input id="search" type="text" placeholder="Busca gifs,hashtags,temas,busca lo que quieras...">
-                    <button id="btnsearch" type="submit" value="button" class="button">Buscar</button>
+        <!-- Contenedor documento -->
+        <div id="contenedor_general">
+
+            <!-- /////////  Buscardor ///////// -->
+
+            <div class="buscador">
+                <div class="title-buscar"><span>Buscar</span></div>
+                <form id="search_form">
+                    <div class="content-buscar">
+                        <input id="search" type="text" placeholder="Busca gifs,hashtags,temas,busca lo que quieras...">
+                        <button id="btnsearch" type="submit" value="button" class="button">Buscar</button>
+                    </div>
+                </form>
+            </div>
+
+            <ul id="keyword" class="keyword">
+                <!-- <li class="keysugerida"></li>
+                <li class="keysugerida"></li>
+                <li class="keysugerida"></li> -->
+            </ul>
+
+            <div class="search__tags" id="search-tags">
+                <!-- #Tag -->
+            </div>
+            
+            <!-- /////////  Contenido Buscado ///////// -->
+
+            <div id="contenido" class="contenido">
+                <!-- GIF Images here -->
+            </div>
+
+
+            <!-- /////////  Contenido Sugerido ///////// -->
+
+            <div class="title_sugerido">
+                <h4>Hoy te sugerimos</h4>
+            </div>
+
+
+            <!-- /////////  Cards Sugerido ///////// -->
+
+            <div class="main_container">
+                <div id="vanness">
+                    <!-- Vanness -->
                 </div>
-            </form>
-        </div>
 
-        <div class="search__tags" id="search-tags"></div>
+                <div id="sailorM">
+                    <!-- Sailor Mercury -->
+                </div>
 
-        <ul id="keyword" class="keyword">
-            <!-- <li class="keysugerida"></li>
-            <li class="keysugerida"></li>
-            <li class="keysugerida"></li> -->
-        </ul>
+                <div id="fab">
+                    <!-- #FabFive -->
+                </div>
 
-        
-        <!-- /////////  Contenido Buscado ///////// -->
-
-        <div id="contenido" class="contenido">
-            <!-- GIF Images here -->
-        </div>
-
-
-        <!-- /////////  Contenido Sugerido ///////// -->
-
-        <div class="title_sugerido">
-            <h4>Hoy te sugerimos</h4>
-        </div>
-
-
-        <!-- /////////  Cards Sugerido ///////// -->
-
-        <div class="main_container">
-            <div id="vanness">
-                <!-- Vanness -->
+                <div id="unicorns">
+                    <!-- Unicorns -->
+                </div>
             </div>
 
-            <div id="sailorM">
-                <!-- Sailor Mercury -->
+
+            <!-- /////////  Tendencias ///////// -->
+
+            <div class="title_sugerido">
+                <h4>Tendencias</h4>
             </div>
 
-            <div id="fab">
-                <!-- #FabFive -->
-            </div>
-
-            <div id="unicorns">
-                <!-- Unicorns -->
+            <div id="trending" class="trending">
+                <!-- Trending GIF here -->
             </div>
         </div>
 
-
-        <!-- /////////  Tendencias ///////// -->
-
-        <div class="title_sugerido">
-            <h4>Tendencias</h4>
-        </div>
-
-        <div id="trending" class="trending">
-            <!-- Trending GIF here -->
-        </div>
     </div>
-
 
     <!-- ////////////////////////////////////// SCRIPTS SRC ////////////////////////////////////////// -->
 

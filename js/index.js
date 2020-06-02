@@ -11,10 +11,13 @@ searchForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const query = searchInput.value;
     search(query);
-
+    createTag(query); // Guardo en Array
+    
     // Deshabilito el panel cuando se ejecuta una busqueda.
     document.getElementById('btnsearch').disabled = true;
     document.getElementById('keyword').style.display = 'none';
+
+    searchInput.value ="";
 
 
 });
@@ -33,16 +36,60 @@ function search(query) {
             json.data.forEach(function(obj) {
                 // console.log(obj);
                 const url = obj.images.fixed_width.url;
-                let width = obj.images.fixed_width.width;
-                let height = obj.images.fixed_width.height;
-                // let title = obj.title;
-                resultadoHTML += `<img class="item" src="${url}" width="${width}" height="${height}">`;
+                // let width = obj.images.fixed_width.width;
+                // let height = obj.images.fixed_width.height;
+                let title = obj.title;
+                resultadoHTML += `
+            
+                <div class="container_api_tendencia">
+                    <img class="item" src="${url}"  width="286px" height="296px"/>
+                    <p class="title_tendencia">${title}</p>
+                </div>
+                `;
             });
 
             contenido.innerHTML = resultadoHTML;
         }).catch(function(error) {
             console.log(error.message);
         });
+}
+
+// Funcion qu guarda la keyword en el array 
+function createTag(keyword){
+    let item = {
+        valor:keyword
+    }
+
+    arrayTag.push(item);
+    guardarTag();
+    return item;
+}
+
+// Guardo en localStorage la keyword
+function guardarTag(){
+    localStorage.setItem('keyword', JSON.stringify(arrayTag));
+    mostrarTag();
+}
+
+// Muestro el tag
+function mostrarTag() {
+
+    let resHTML="";
+    arrayTag = JSON.parse(localStorage.getItem('keyword'));
+
+    if(arrayTag === null){
+        arrayTag = [];
+    }else{
+        arrayTag.forEach(indice => {
+            resHTML += `
+            <div class="tag_content">
+               #${indice.valor}
+            </div>
+        `;
+        })
+        tagContainer.innerHTML = resHTML;
+    }
+
 }
 
 
@@ -262,3 +309,44 @@ btnDay.addEventListener('click', () => {
 
 
 // =============================== FIN #DARK MODE =========================================
+
+// =============================== MIS GIFOS =======================================
+
+const btnMisGifos = document.getElementById('btn_mis_gifos'); //Boton mis gifos
+const body = document.querySelector('#contenedor_general'); // Contenedor de todo el body
+const myGifos = document.getElementById('gifos_container');
+const logo = document.getElementById('logo');
+const img = document.getElementById('uploadedGIF');
+const misGifos = document.getElementById('my-gifs-grid');
+
+logo.addEventListener('click', () => {
+    body.style.display = 'block';
+    myGifos.classList.add('hidden');
+});
+
+btnMisGifos.addEventListener('click', () => {
+    body.style.display = 'none';
+    myGifos.classList.remove('hidden');
+    getGif();
+});
+
+async function getGif(){
+
+    // img.classList.remove('hidden');
+
+    let misGifosStorage = "";
+    for(let i=0; i < localStorage.length; i++){
+        if (localStorage.key(i).indexOf("gif") >= 0){
+            let clave = localStorage.key(i);
+            let objGuifos = JSON.parse(localStorage.getItem(clave));
+
+            misGifosStorage += `
+                <div class="mis_gifos">
+                    <img src="${objGuifos.data.images.fixed_height.url}" alt="${objGuifos.data.title}"/>
+                </div>
+            `
+        } 
+    }
+
+misGifos.innerHTML += misGifosStorage;
+}

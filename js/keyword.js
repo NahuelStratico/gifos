@@ -4,6 +4,8 @@ const button = document.getElementById('btnsearch');
 const panelKey = document.getElementById('keyword');
 const tag = document.getElementById('search-tags');
 const apiKey = '3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&=';
+const tagContainer = document.getElementById('search-tags');
+let arrayTag = [];
 
 // Deshabilito el boton buscar
 button.disabled = true;
@@ -29,13 +31,13 @@ input.addEventListener('keyup', () => {
     }
 });
 
-input.addEventListener('keyup', searchTag);
-// searchTag();
+input.addEventListener('keyup', function (){
+    
+    const keyword = input.value.toString();
+    console.log(keyword);
+    // const path = `https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=${apiKey}&limit=3`;
+    let path = 'https://api.giphy.com/v1/gifs/search?api_key=' + apiKey + '&q=' + keyword + '&limit=3&offset=0&rating=G&lang=en';
 
-function searchTag(input){
-
-    const keyword = input.value;
-    const path = `https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=${apiKey}&limit=3`;
 
     fetch(path)
         .then(res => res.json())
@@ -59,32 +61,8 @@ function searchTag(input){
     }).catch(function(error) {
         console.log(error.message);
     });
-}
+});
 
 
 
-// async function searchTag(input){
-    
-//     const keyword = input.value;
-//     fetchURL(`https://api.giphy.com/v1/gifs/search?q=${keyword}&api_key=${apiKey}&limit=10`);
-    
-//     fetch(path)
-//         .then(res => res.json())
-//         .then(json => {
-//             console.log(json.data[0].images.fixed_width.url);
-//     searchResults.data.map(element => {
-//         element.title && element.title !== " " && element.title !== "&emsp;"
-//             ? $searchTags.appendChild(`
-//             <div>
-//                 <button type="button" class="btn_tag">
-//                     <span class="btn__text-container">
-//                         ${element.title}
-//                     </span>
-//                 </button>
-//             </div>
-//             `)
-//             : null;
-//     });
-
-// }
 
