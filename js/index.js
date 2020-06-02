@@ -100,9 +100,9 @@ function mostrarTag() {
 document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault();
     const jonathan = 'Jonathan Vanness';
-    const sailor = 'sailor mercury';
-    const fib = 'fab Five';
-    const unic = 'Unicorns&Rainbows';
+    const sailor = 'mercury';
+    const fib = 'simpson';
+    const unic = 'superman';
 
     jonVanness(jonathan);
     sailorMercury(sailor);
@@ -129,7 +129,9 @@ function jonVanness(jonathan) {
                 
                 <p>#${title}</p>
                 <img class="img-vanness" src="${url}"/> 
-                <button class="btnjonathan">Ver mas...</button>
+                <button class="btnjonathan">
+                    <a href="https://giphy.com/search/jonathan-van-ness" target="blank">Ver mas...</a>
+                </button>
                 
                 `;
             });
@@ -162,7 +164,9 @@ function sailorMercury(sailor) {
                 
                 <p>#${title}</p>
                 <img class="img-saylor" src="${url}"/> 
-                <button class="btnSailor">Ver mas...</button>
+                <button class="btnSailor">
+                    <a href="https://giphy.com/search/mercury" target="blank">Ver mas...</a>
+                </button>
                 
                 `;
             });
@@ -195,7 +199,9 @@ function fabFive(fib) {
                 
                 <p>#${title}</p>
                 <img class="img-fab" src="${url}"/> 
-                <button class="btnFab">Ver mas...</button>
+                <button class="btnFab">
+                    <a href="https://giphy.com/search/simpson" target="blank">Ver mas...</a>
+                </button>
                 
                 `;
             });
@@ -227,7 +233,9 @@ function unicornis(unic) {
                 
                 <p>#${title}</p>
                 <img class="img-uni" src="${url}"/> 
-                <button class="btnUni">Ver mas...</button>
+                <button class="btnUni">
+                    <a href="https://giphy.com/search/superman" target="blank">Ver mas...</a>
+                </button>
                 
                 `;
             });
@@ -348,5 +356,5 @@ async function getGif(){
         } 
     }
 
-misGifos.innerHTML += misGifosStorage;
+    misGifos.innerHTML += misGifosStorage;
 }

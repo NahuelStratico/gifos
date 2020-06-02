@@ -1,3 +1,4 @@
+
 body,
 html {
     font-family: 'Chakra Petch', sans-serif;
@@ -95,10 +96,6 @@ html {
 }
 
 .gif-grid-content{
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: .5rem; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: stretch; 
@@ -106,8 +103,6 @@ html {
 }
 
 .gif-grid-content img{
-    /* margin-right: .5rem;
-    margin: 0 1rem 1rem; */
     height: 100%;
     width: 100%;
 }
@@ -129,7 +124,6 @@ html {
 
 .dark {
     background: #110038;
-    height: 100vh;
 }
 
 
@@ -224,6 +218,7 @@ body.dark .keyword {
     background: #B4B4B4;
     box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
 }
+
 .btn_bg_night{
     background: #CE36DB;
     color:#ffffff;
@@ -233,6 +228,25 @@ body.dark .keyword {
     color: #110038;
 }
 
+/* ----------- Card sugeridos */
+body.dark #vanness p,#sailorM p{
+    background: linear-gradient(90deg, #2E32FB, #EE3EFE);
+}
+body.dark #sailorM p{
+    background: linear-gradient(90deg, #2E32FB, #EE3EFE);
+}
+body.dark #fab p {
+    background: linear-gradient(90deg, #2E32FB, #EE3EFE);
+}
+body.dark #unicorns p {
+    background: linear-gradient(90deg, #2E32FB, #EE3EFE);
+}
+body.dark .title_tendencia{
+    background: linear-gradient(90deg, #2E32FB, #EE3EFE);
+}
+body.dark .tag_content {
+    background: #EE3EFE;
+}
 
 /* ========================================= # FIN DARK MODE  =============================================*/
 
@@ -391,7 +405,14 @@ body.dark .keyword {
     margin-top: 0.5rem;
     margin-left: 1rem;
     list-style: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
+.keysugerida:hover{
+    border: dashed;
+}
+
 .key{
     display: inline-block;
     width: 100%;
@@ -399,6 +420,12 @@ body.dark .keyword {
     text-decoration: none;
     line-height: 33px;
     padding-left: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 30px;
 }
 
 .btn_tag{
@@ -435,7 +462,8 @@ body.dark .keyword {
     background: #4180F6;
     border: 1px solid #4C2F99;
     box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
-    font-family: ChakraPetch-Regular;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
     font-size: 14px;
     color: #FFFFFF;
     letter-spacing: 0;
@@ -443,6 +471,7 @@ body.dark .keyword {
     text-align: center;
     margin: 1rem .2rem;
 }
+
 
 /* ------------------------------------------- Hoy te sugerimos -----------------------  */
 
@@ -517,6 +546,18 @@ body.dark .keyword {
     height: 34px;
     background: #4180F6;
     cursor: pointer;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+.btnjonathan a{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
 }
 
 
@@ -559,6 +600,18 @@ body.dark .keyword {
     height: 34px;
     background: #4180F6;
     cursor: pointer;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+.btnSailor a{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
 }
 
 
@@ -602,6 +655,18 @@ body.dark .keyword {
     height: 34px;
     background: #4180F6;
     cursor: pointer;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+.btnFab a{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
 }
 
 
@@ -645,6 +710,18 @@ body.dark .keyword {
     height: 34px;
     background: #4180F6;
     cursor: pointer;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+.btnUni a{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+    text-decoration: none;
 }
 
 
@@ -690,4 +767,6 @@ body.dark .keyword {
     padding-left: 5px;
     box-sizing: border-box;
     color: #fff;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
 }
