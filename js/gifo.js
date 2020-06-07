@@ -30,6 +30,7 @@ const state3 = document.getElementById('captura');
 const state4 = document.getElementById('subiendo');
 const stateExito = document.getElementById('exito');
 const img_final = document.getElementById('img_final');
+const cancelar = document.getElementById('cancelar');
 
 // Ocultando y mostrando las pantallas
 btnComenzar.addEventListener('click', () => {
@@ -45,11 +46,23 @@ btnComenzar.addEventListener('click', () => {
     .catch(console.error);
 
 });
+
+// Cancelar subida
+cancelar.addEventListener('click', stopRecording);
+
 // btn final
 btn_final.addEventListener('click', () => {
     stateExito.style.display = 'none';
     state1.style.display = 'block';
     video.style.display = 'none';
+   
+    navigator.mediaDevices.getUserMedia({
+        video: false,
+        audio: false
+    })
+    .then(video => video.srcObject = false)
+    .catch(console.error);
+ 
 });
 
 // Boton que copia el enlace del gifo
@@ -75,6 +88,7 @@ async function startRecord(){
         quality: 10,
         width: 250
     });
+    initTemp() //Arranca el contador
     console.log(recording);
     recorder.startRecording();
     recording = true; //el FLAG cambia a true para indicar que se esta grabando.  
@@ -94,12 +108,17 @@ async function stopRecording(){
     recording = false;
     console.log('diste click en STOP ', recording);
     video.pause();
+    stopTemp(); // Paro el cronometro
 
     // Reemplazo HTML
     title_header.innerText = 'Vista previa';
     $stop.style.display = 'none';
     $upload.classList.remove('hidden');
     video.style.display = 'none';
+
+    // Aca modifico lo que hice desde repetir captura
+    $start.style.display = 'none';
+    $upload.style.display = 'block';
 
      //----------------PASO 3---------------------------------           
     let blob = await recorder.getBlob();
@@ -215,8 +234,28 @@ function mostrar(...elements){
 
 // Funcion Repetir captura
 function repeCap(){
-    state2.style.display = 'none';
-    state1.style.display = 'block';
+    $start.style.display = 'block';
+    $upload.style.display = 'none';
+    title_header.innerText = 'Un chequeo antes de empezar';
+    resetTemp(); // Reseteo el temporizador
+
+    recorder.stopRecording();
+    recording = false;
+    // video.pause();
+    // recorder.destroy();
+
+    navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false
+    })
+    .then(stream => video.srcObject = stream)
+    .catch(console.error);
+
+    startRecord();
+    
+    
+    // state3.style.display = 'block';
+     // state2.style.display = 'none';
 }
 
 // Funcion para copiar el enlace del gif
@@ -276,4 +315,35 @@ async function downloadGif() {
     document.body.appendChild(saveImg);
     saveImg.click();
     document.body.removeChild(saveImg);
+}
+
+// Temporizador
+let temporizador = document.getElementById('temporizador');
+let tiempo = 0, intervalo = 0;
+let verificador = false;
+
+
+// Iniciar Cronometro
+function initTemp(){
+    if(verificador == false){
+        intervalo = setInterval(function(){
+            tiempo += 0.01;
+            temporizador.innerHTML = tiempo.toFixed(2);
+        },10);
+        verificador = true;
+        
+    }
+}
+// Para Cronometro
+function stopTemp(){  
+        verificador = false;
+        clearInterval(intervalo); 
+}
+// Reseter Cronometro
+function resetTemp(){
+        verificador = false;
+        tiempo = 0;
+        temporizador.innerHTML = tiempo + '0:00';
+        clearInterval(intervalo);
+
 }

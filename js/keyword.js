@@ -52,7 +52,7 @@ input.addEventListener('keyup', function (){
         
             resultadoHTML += `
                 <li class="keysugerida">
-                   <a href="${url}" class="key"> ${title}</a>
+                   <a href="${url}" class="key" target="blank"> ${title}</a>
                 </li>
             `;
         });

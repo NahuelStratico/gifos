@@ -435,10 +435,17 @@ ol {
 }
 
 .gif-grid-content{
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-right: .5rem;
+    margin-right: .5rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: .5rem 0;
+    justify-items: stretch;
 }
 
 .gif-grid-content img{

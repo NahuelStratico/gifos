@@ -54,9 +54,9 @@
                     <p>Crear tus <strong>guifos</strong> es muy facil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tus guifos son:</p>
 
                     <ol>
-                        <li>Dar permisos de acceso a la cámara (sólo por el tiempo de uso</li>
-                        <li>Capturar tu momento guifo</li>
-                        <li>Revisar el momento</li>
+                        <li>Dar permisos de acceso a la cámara (sólo por el tiempo de uso).</li>
+                        <li>Capturar tu momento guifo.</li>
+                        <li>Revisar el momento.</li>
                         <li>Listo para subir y compartir!</li>
                     </ol>
                     <p>¿Quéres comenzar a crear tus <strong> guifos </strong> hora?</p>
@@ -93,9 +93,9 @@
              <!-- Button Captura -->
             <div class="btn_group" id="btn_captura__group">
                 <div id="cronometro hidden">
-                    <div class="cronometro">
-                        <span>00:</span>
-                        <span>00:</span>
+                    <div class="cronometro" id="temporizador">
+                        <span>00</span>:
+                        <span>00</span>:
                         <span>00</span>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
             </div>
         </div>
         <div class="btn_group_subiendo">
-            <button class="btn_subiendo_cancelar">
+            <button class="btn_subiendo_cancelar" id="cancelar">
                 <span>Cancelar</span>
             </button>
         </div>
@@ -213,7 +213,7 @@
             <h4>Mis Gifos</h4>
         </div>
         <div class="gif-grid-content" id="my-gifs-grid">
-            <img id="uploadedGIF" />
+            <img id="uploadedGIF" class="hidden"/>
             <!-- localStorage.getItem -->
         </div>
     </div>

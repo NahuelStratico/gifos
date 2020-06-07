@@ -99,7 +99,7 @@ function mostrarTag() {
 
 document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault();
-    const jonathan = 'Jonathan Vanness';
+    const jonathan = 'Vanness honey';
     const sailor = 'mercury';
     const fib = 'simpson';
     const unic = 'superman';
@@ -130,7 +130,7 @@ function jonVanness(jonathan) {
                 <p>#${title}</p>
                 <img class="img-vanness" src="${url}"/> 
                 <button class="btnjonathan">
-                    <a href="https://giphy.com/search/jonathan-van-ness" target="blank">Ver mas...</a>
+                    <a href="https://giphy.com/search/van-ness-honey" target="blank">Ver mas...</a>
                 </button>
                 
                 `;
