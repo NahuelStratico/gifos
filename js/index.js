@@ -5,6 +5,19 @@
 
 let searchForm = document.getElementById('search_form');
 let searchInput = document.getElementById('search');
+let btnsearch = document.getElementById('btnsearch');
+let titleBusqueda = document.getElementById('title_busqueda');
+
+
+btnsearch.addEventListener('click', () => {
+    let cont = searchInput.value;
+
+    let titleHTML = `<h4 class="titlesearch">${cont} : (resultados)</h4>`;
+
+    titleBusqueda.style.display= 'block';
+    titleBusqueda.innerHTML = titleHTML;
+
+});
 
 // GIF que cargan cuando el DOM este listo
 searchForm.addEventListener('submit', function(e) {
@@ -27,11 +40,13 @@ function search(query) {
     const apiKey = '3JTbGwFdhczzKFywhzOWVOWUJjsAtfzH&=';
     const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${query}`;
     const contenido = document.getElementById('contenido');
+    
+
     fetch(path)
         .then(res => res.json())
         .then(json => {
             // console.log(json.data[0].images.fixed_width.url);
-
+            let titleHTML = "";
             let resultadoHTML = '';
             json.data.forEach(function(obj) {
                 // console.log(obj);
@@ -49,6 +64,10 @@ function search(query) {
             });
 
             contenido.innerHTML = resultadoHTML;
+
+            // titleBusqueda.innerHTML = titleHTML;
+            
+
         }).catch(function(error) {
             console.log(error.message);
         });

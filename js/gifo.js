@@ -47,21 +47,11 @@ btnComenzar.addEventListener('click', () => {
 
 });
 
-// Cancelar subida
-cancelar.addEventListener('click', stopRecording);
-
 // btn final
 btn_final.addEventListener('click', () => {
     stateExito.style.display = 'none';
     state1.style.display = 'block';
     video.style.display = 'none';
-   
-    navigator.mediaDevices.getUserMedia({
-        video: false,
-        audio: false
-    })
-    .then(video => video.srcObject = false)
-    .catch(console.error);
  
 });
 
