@@ -6,6 +6,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     background: #FFF4FD;
+    width: 100%;
 }
 
 .hidden{
@@ -36,7 +37,6 @@ html {
 .cabecera {
     background: linear-gradient(90deg, #4180F6, #F7C9F3);
     height: 23px;
-    width: 100%;
     border-bottom: 1px solid black;
     color: #fff;
     text-align: left;
